@@ -1,0 +1,19 @@
+[
+  { "name": "HTML / CSS", "category": "tool", "level": "mastered", "profiles": ["front", "fullstack"] },
+  { "name": "JavaScript", "category": "tool", "level": "mastered", "profiles": ["front", "back", "fullstack"] },
+  { "name": "TypeScript", "category": "tool", "level": "mastered", "profiles": ["front", "back", "fullstack"] },
+  { "name": "React", "category": "tool", "level": "mastered", "profiles": ["front", "fullstack"] },
+  { "name": "Next.js", "category": "tool", "level": "mastered", "profiles": ["front", "fullstack"] },
+  { "name": "Tailwind CSS", "category": "tool", "level": "mastered", "profiles": ["front", "fullstack"] },
+  { "name": "Node.js", "category": "tool", "level": "learning", "profiles": ["back", "fullstack"] },
+  { "name": "Express", "category": "tool", "level": "learning", "profiles": ["back", "fullstack"] },
+  { "name": "PostgreSQL", "category": "tool", "level": "learning", "profiles": ["back", "fullstack"] },
+
+  { "name": "Responsive / Mobile-first", "category": "concept", "level": "mastered", "profiles": ["front", "fullstack"] },
+  { "name": "Accessibilité (WCAG)", "category": "concept", "level": "mastered", "profiles": ["front", "fullstack"] },
+  { "name": "Gestion d'état", "category": "concept", "level": "mastered", "profiles": ["front", "fullstack"] },
+  { "name": "Authentification (JWT)", "category": "concept", "level": "learning", "profiles": ["back", "fullstack"] },
+  { "name": "API REST", "category": "concept", "level": "learning", "profiles": ["back", "fullstack"] },
+  { "name": "Cache", "category": "concept", "level": "learning", "profiles": ["back", "fullstack"] },
+  { "name": "Sécurité (CORS, injections)", "category": "concept", "level": "learning", "profiles": ["back", "fullstack"] }
+]

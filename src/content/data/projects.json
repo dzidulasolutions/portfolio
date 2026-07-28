@@ -1,0 +1,30 @@
+[
+  {
+    "id": "proj-001",
+    "name": "TaskFlow",
+    "description": "Application de gestion de tâches en équipe avec suivi en temps réel.",
+    "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "role": "Solo",
+    "liveUrl": "https://taskflow-demo.vercel.app",
+    "githubUrl": "https://github.com/alexmwamba/taskflow",
+    "highlight": "J'ai optimisé le rendu des listes de tâches avec la virtualisation, ce qui a réduit le temps de chargement de 40% sur les grandes listes.",
+    "status": "done",
+    "profiles": ["front", "fullstack"],
+    "featured": true,
+    "order": 1,
+    "tags": ["Productivité", "Dashboard"],
+    "media": {
+      "thumbnail": {
+        "url": "/images/projects/taskflow-cover.jpg",
+        "altText": "Interface principale de TaskFlow montrant un tableau kanban avec des colonnes de tâches"
+      },
+      "gallery": [
+        {
+          "url": "/images/projects/taskflow-detail.jpg",
+          "altText": "Vue détaillée d'une tâche avec ses sous-tâches et commentaires"
+        }
+      ],
+      "videoUrl": "https://youtube.com/watch?v=exemple"
+    }
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "type": "front",
+    "title": "Développeur Front-End",
+    "tagline": "Je construis des interfaces rapides et accessibles avec React et Next.js.",
+    "bio": "Développeur autodidacte depuis 2 ans, je me spécialise sur l'écosystème React. Je construis des interfaces pensées pour la performance et l'accessibilité, pas juste pour l'apparence.",
+    "ctaLabel": "Voir mes projets",
+    "cvUrl": "/cv/alex-mwamba-front.pdf",
+    "seoDescription": "Portfolio d'Alex Mwamba, développeur Front-End spécialisé React et Next.js."
+  },
+  {
+    "type": "back",
+    "title": "Développeur Back-End",
+    "tagline": "Je conçois des API robustes et des architectures serveur pensées pour durer.",
+    "bio": "Je m'intéresse à la logique métier, à la sécurité et à la fiabilité des systèmes. J'apprends actuellement Node.js et les bases de données relationnelles et NoSQL en profondeur.",
+    "ctaLabel": "Voir mes projets back-end",
+    "cvUrl": "/cv/alex-mwamba-back.pdf",
+    "seoDescription": "Portfolio d'Alex Mwamba, développeur Back-End en apprentissage Node.js et bases de données."
+  },
+  {
+    "type": "fullstack",
+    "title": "Développeur Full-Stack",
+    "tagline": "Du back au front, je construis des produits complets, de l'API à l'interface.",
+    "bio": "Je relie les deux mondes : une interface soignée ne vaut rien sans une API solide derrière, et inversement. Mon objectif est de livrer des produits cohérents de bout en bout.",
+    "ctaLabel": "Voir tous mes projets",
+    "cvUrl": "/cv/alex-mwamba-fullstack.pdf",
+    "seoDescription": "Portfolio d'Alex Mwamba, développeur Full-Stack — Front-End et Back-End."
+  }
+]

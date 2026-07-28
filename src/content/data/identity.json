@@ -1,0 +1,10 @@
+{
+  "name": "Alex Mwamba",
+  "location": "Lomé, Togo",
+  "availability": "Recherche active — Stage / Emploi",
+  "socials": [
+    { "platform": "email", "url": "mailto:alex.mwamba@example.com" },
+    { "platform": "github", "url": "https://github.com/alexmwamba" },
+    { "platform": "linkedin", "url": "https://linkedin.com/in/alexmwamba" }
+  ]
+}
