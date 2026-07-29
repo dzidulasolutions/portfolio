@@ -1,13 +1,15 @@
 import { getProjects } from "@/lib/api/projects";
+import { getProfile } from "@/lib/api/profiles";
 import { PageShell } from "@/components/layout/page-shell";
+import { Hero } from "@/components/sections/hero";
 
 export default async function FrontPage() {
+  const profile = await getProfile("front");
   const projects = await getProjects("front");
 
   return (
-
     <PageShell>
-      <h1 id="accueil" className="font-title text-4xl pt-12">Profil Front-End</h1>
+      <Hero profile={profile} />
       <p className="font-body">{projects.length} projet(s) trouvé(s)</p>
     </PageShell>
   );
