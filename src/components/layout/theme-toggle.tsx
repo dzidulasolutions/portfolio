@@ -1,19 +1,26 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import { IconlySun, IconlyMoon } from "@/components/ui/icons";
 
+// Ces fonctions ne changent jamais après le montage : pas besoin de "subscribe" réel
+function subscribe() {
+  return () => {};
+}
+function getClientSnapshot() {
+  return true; // vrai côté navigateur, une fois le composant monté
+}
+function getServerSnapshot() {
+  return false; // toujours faux côté serveur (pas de navigateur = pas encore "monté")
+}
+
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
 
   if (!mounted) {
-    return <div className="w-9 h-9" />; // placeholder pour éviter un décalage de layout
+    return <div className="w-9 h-9" />;
   }
 
   const isDark = resolvedTheme === "dark";
