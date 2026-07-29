@@ -5,6 +5,7 @@ import { PageShell } from "@/components/layout/page-shell";
 import { Hero } from "@/components/sections/hero";
 import { Technos } from "@/components/sections/technos";
 import { Competences } from "@/components/sections/competences";
+import { Projects } from "@/components/sections/projects";
 
 export default async function FrontPage() {
   const profile = await getProfile("front");
@@ -17,7 +18,7 @@ export default async function FrontPage() {
       <Hero profile={profile} />
       <Technos skills={tools} />
       <Competences concepts={concepts} />
-      <p className="font-body">{projects.length} projet(s) trouvé(s)</p>
+      <Projects projects={projects} />
     </PageShell>
   );
 }

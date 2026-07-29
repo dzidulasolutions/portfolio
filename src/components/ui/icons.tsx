@@ -66,3 +66,19 @@ export const IconlyTwitter = ({ size = 24, color = "#000000" }: IconlyIconProps)
 export const IconlyEmail = ({ size = 24, color = "#000000" }: IconlyIconProps) => (
     <MdEmail size={size} color={color} />
 )
+
+export const IconlyCheck = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 13L9 17L19 7" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+};
+
+export const IconlyExternalLink = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 17L17 7M17 7H9M17 7V15" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+};
