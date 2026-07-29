@@ -1,3 +1,7 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+
 type IconlyIconProps = {
     size?: number;
     color?: string;
@@ -30,3 +34,35 @@ export const IconlyMoon = ({ size = 24, color = "#000000" }: IconlyIconProps) =>
         </svg>
     );
 };
+
+export const IconlyMenu = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+    return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke={color} strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+    );
+};
+
+export const IconlyClose = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+    return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6L18 18M6 18L18 6" stroke={color} strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+    );
+};
+
+export const IconlyGithub = ({ size = 24, color = "#000000" }: IconlyIconProps) => (
+    <FaGithub size={size} color={color} />
+);
+
+export const IconlyLinkedin = ({ size = 24, color = "#000000" }: IconlyIconProps) => (
+    <FaLinkedin size={size} color={color} />
+);
+
+export const IconlyTwitter = ({ size = 24, color = "#000000" }: IconlyIconProps) => (
+    <FaXTwitter size={size} color={color} />
+);
+
+export const IconlyEmail = ({ size = 24, color = "#000000" }: IconlyIconProps) => (
+    <MdEmail size={size} color={color} />
+)
