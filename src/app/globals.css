@@ -1,21 +1,60 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
+
+@theme {
+  --color-neutral-50: #f8f7f9;
+  --color-neutral-100: #edecef;
+  --color-neutral-200: #d7d7da;
+  --color-neutral-300: #bbbbbe;
+  --color-neutral-400: #95979b;
+  --color-neutral-500: #75777c;
+  --color-neutral-600: #5a5d63;
+  --color-neutral-700: #42454c;
+  --color-neutral-800: #2f3239;
+  --color-neutral-900: #232526;
+
+  /* Échelle accent (calculée à partir de ton bleu) */
+  --color-accent-50: #e6f2fa;
+  --color-accent-100: #bfdff1;
+  --color-accent-200: #99cce9;
+  --color-accent-300: #66b3de;
+  --color-accent-400: #3399d3;
+  --color-accent-500: #0080c8;
+  --color-accent-600: #006daa;
+  --color-accent-700: #005a8c;
+  --color-accent-800: #00466e;
+  --color-accent-900: #003350;
+
+  /* Couleurs sémantiques, pilotées par le thème clair/sombre */
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+
+  /* Polices */
+  --font-title: var(--font-sora), sans-serif;
+  --font-ui: var(--font-google-sans), sans-serif;
+  --font-body: var(--font-roboto), sans-serif;
+}
 
 :root {
-  --color-bg: #F8F7F9;
-  --color-text: #1D2128;
-  --color-accent: #0080C8;
+  --color-bg: #f8f7f9;
+  --color-text: #232526;
 }
 
 .dark {
-  --color-bg: #1D2128;
-  --color-text: #F8F7F9;
-  --color-accent: #0080C8;
+  --color-bg: #232526;
+  --color-text: #f8f7f9;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-google-sans), sans-serif;
+  font-family: var(--font-body);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #0080c8 0%, #00c2a8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #0080c8; /* Fallback */
 }
