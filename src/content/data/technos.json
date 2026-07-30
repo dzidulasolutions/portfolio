@@ -1,0 +1,46 @@
+{
+  "front": [
+    { "name": "HTML5", "bgColor": "#fbe5de", "borderColor": "#e34f26" },
+    { "name": "CSS3", "bgColor": "#dceaf4", "borderColor": "#1572b6" },
+    { "name": "JavaScript", "bgColor": "#fefadd", "borderColor": "#f7df1e" },
+    { "name": "TypeScript", "bgColor": "#e0ebf6", "borderColor": "#3178c6" },
+    { "name": "React", "bgColor": "#e7f9fe", "borderColor": "#61dafb" },
+    { "name": "Next.js", "bgColor": "#d9d9d9", "borderColor": "#000000" },
+    { "name": "Tailwind CSS", "bgColor": "#daf4f9", "borderColor": "#06b6d4" }
+  ],
+  "back": [
+    { "name": "JavaScript", "bgColor": "#fefadd", "borderColor": "#f7df1e" },
+    { "name": "TypeScript", "bgColor": "#e0ebf6", "borderColor": "#3178c6" },
+    { "name": "Node.js", "bgColor": "#e0f0e0", "borderColor": "#339933" },
+    { "name": "NestJS", "bgColor": "#fadee4", "borderColor": "#e0234e" },
+    { "name": "MongoDB", "bgColor": "#e3f1e4", "borderColor": "#47a248" },
+    { "name": "Prisma", "bgColor": "#e0e1e4", "borderColor": "#2d3748" },
+    { "name": "PostgreSQL", "bgColor": "#e0e8ef", "borderColor": "#336791" },
+    { "name": "Redis", "bgColor": "#fae1e0", "borderColor": "#dc382d" },
+    { "name": "Socket.IO", "bgColor": "#d9d9d9", "borderColor": "#010101" },
+    { "name": "Docker", "bgColor": "#deeffc", "borderColor": "#2496ed" },
+    { "name": "Nginx", "bgColor": "#d9efe1", "borderColor": "#009639" },
+    { "name": "GitHub Actions", "bgColor": "#deedff", "borderColor": "#2088ff" },
+    { "name": "Stripe", "bgColor": "#e8e6ff", "borderColor": "#635bff" }
+  ],
+  "fullstack": [
+    { "name": "HTML5", "bgColor": "#fbe5de", "borderColor": "#e34f26" },
+    { "name": "CSS3", "bgColor": "#dceaf4", "borderColor": "#1572b6" },
+    { "name": "JavaScript", "bgColor": "#fefadd", "borderColor": "#f7df1e" },
+    { "name": "TypeScript", "bgColor": "#e0ebf6", "borderColor": "#3178c6" },
+    { "name": "React", "bgColor": "#e7f9fe", "borderColor": "#61dafb" },
+    { "name": "Next.js", "bgColor": "#d9d9d9", "borderColor": "#000000" },
+    { "name": "Tailwind CSS", "bgColor": "#daf4f9", "borderColor": "#06b6d4" },
+    { "name": "Node.js", "bgColor": "#e0f0e0", "borderColor": "#339933" },
+    { "name": "NestJS", "bgColor": "#fadee4", "borderColor": "#e0234e" },
+    { "name": "MongoDB", "bgColor": "#e3f1e4", "borderColor": "#47a248" },
+    { "name": "Prisma", "bgColor": "#e0e1e4", "borderColor": "#2d3748" },
+    { "name": "PostgreSQL", "bgColor": "#e0e8ef", "borderColor": "#336791" },
+    { "name": "Redis", "bgColor": "#fae1e0", "borderColor": "#dc382d" },
+    { "name": "Socket.IO", "bgColor": "#d9d9d9", "borderColor": "#010101" },
+    { "name": "Docker", "bgColor": "#deeffc", "borderColor": "#2496ed" },
+    { "name": "Nginx", "bgColor": "#d9efe1", "borderColor": "#009639" },
+    { "name": "GitHub Actions", "bgColor": "#deedff", "borderColor": "#2088ff" },
+    { "name": "Stripe", "bgColor": "#e8e6ff", "borderColor": "#635bff" }
+  ]
+}

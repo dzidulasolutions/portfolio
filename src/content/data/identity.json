@@ -1,11 +1,25 @@
 {
-  "index":"GD",
-  "name": "Gamatho Joel Dzidula Koffi",
-  "location": "Lomé, Togo",
-  "availability": "Recherche active — Stage / Emploi",
+  "initials": "GD",
+  "firstName": "Gamatho",
+  "lastName": "Joel Dzidula Koffi",
+  "location": {
+    "city": "Lomé",
+    "country": "Togo"
+  },
+  "availability": {
+    "status": "Recherche active",
+    "opportunities": ["Stage", "Emploi"],
+    "workMode": ["Présentiel", "Remote"]
+  },
+  "stats": {
+    "experienceYears": 0,
+    "learningYears": 0
+  },
   "socials": [
-    { "platform": "email", "url": "mailto:alex.mwamba@example.com" },
-    { "platform": "github", "url": "https://github.com/alexmwamba" },
-    { "platform": "linkedin", "url": "https://linkedin.com/in/alexmwamba" }
+    { "platform": "email", "url": "mailto:ton-email@example.com" },
+    { "platform": "phone", "url": "tel:+228XXXXXXXX" },
+    { "platform": "whatsapp", "url": "https://wa.me/228XXXXXXXX" },
+    { "platform": "github", "url": "https://github.com/ton-profil" },
+    { "platform": "linkedin", "url": "https://linkedin.com/in/ton-profil" }
   ]
 }

@@ -2,28 +2,28 @@
   {
     "type": "front",
     "title": "Développeur Front-End",
-    "tagline": "Je construis des interfaces rapides et accessibles avec React et Next.js.",
-    "bio": "Développeur autodidacte depuis 2 ans, je me spécialise sur l'écosystème React. Je construis des interfaces pensées pour la performance et l'accessibilité, pas juste pour l'apparence.",
-    "ctaLabel": "Voir mes projets",
-    "cvUrl": "/cv/alex-mwamba-front.pdf",
-    "seoDescription": "Portfolio d'Alex Mwamba, développeur Front-End spécialisé React et Next.js."
+    "tagline": "Je crée des interfaces web modernes, intuitives et performantes avec React et Next.js.",
+    "bio": "Je développe des interfaces pensées pour offrir une expérience utilisateur fluide, agréable et accessible. J'aime transformer des idées en interfaces propres, responsives et adaptées aux besoins des utilisateurs en utilisant les technologies modernes du web.",
+    "ctaLabel": "Découvrir mes projets",
+    "cvUrl": "/cv/gamatho-frontend.pdf",
+    "seoDescription": "Portfolio de Gamatho Joel Dzidula Koffi, développeur Front-End spécialisé dans la création d'interfaces modernes avec React et Next.js."
   },
   {
     "type": "back",
     "title": "Développeur Back-End",
-    "tagline": "Je conçois des API robustes et des architectures serveur pensées pour durer.",
-    "bio": "Je m'intéresse à la logique métier, à la sécurité et à la fiabilité des systèmes. J'apprends actuellement Node.js et les bases de données relationnelles et NoSQL en profondeur.",
-    "ctaLabel": "Voir mes projets back-end",
-    "cvUrl": "/cv/alex-mwamba-back.pdf",
-    "seoDescription": "Portfolio d'Alex Mwamba, développeur Back-End en apprentissage Node.js et bases de données."
+    "tagline": "Je construis des API fiables et des systèmes capables de répondre aux besoins des applications modernes.",
+    "bio": "Je m'intéresse à la conception de la logique métier, à la gestion des données et à la création de services backend sécurisés. Je développe mes compétences avec Node.js, NestJS et les bases de données afin de construire des applications solides et évolutives.",
+    "ctaLabel": "Découvrir mes projets Back-End",
+    "cvUrl": "/cv/gamatho-backend.pdf",
+    "seoDescription": "Portfolio de Gamatho Joel Dzidula Koffi, développeur Back-End spécialisé dans la création d'API et de services web modernes."
   },
   {
     "type": "fullstack",
     "title": "Développeur Full-Stack",
-    "tagline": "Du back au front, je construis des produits complets, de l'API à l'interface.",
-    "bio": "Je relie les deux mondes : une interface soignée ne vaut rien sans une API solide derrière, et inversement. Mon objectif est de livrer des produits cohérents de bout en bout.",
+    "tagline": "Je développe des applications complètes, de l'interface utilisateur jusqu'à l'architecture serveur.",
+    "bio": "Mon objectif est de maîtriser toute la chaîne de développement web : concevoir une interface agréable, créer une API performante et connecter les différentes parties d'une application. J'aime comprendre comment chaque élément fonctionne pour construire des solutions complètes et cohérentes.",
     "ctaLabel": "Voir tous mes projets",
-    "cvUrl": "/cv/alex-mwamba-fullstack.pdf",
-    "seoDescription": "Portfolio d'Alex Mwamba, développeur Full-Stack — Front-End et Back-End."
+    "cvUrl": "/cv/gamatho-fullstack.pdf",
+    "seoDescription": "Portfolio de Gamatho Joel Dzidula Koffi, développeur Full-Stack orienté Front-End, Back-End et création d'applications web modernes."
   }
 ]

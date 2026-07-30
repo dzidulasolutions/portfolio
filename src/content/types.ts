@@ -8,10 +8,10 @@ export type ProfileType = "front" | "back" | "fullstack";
 
 export interface Profile {
   type: ProfileType;
-  title: string;          // ex: "Développeur Front-End"
-  tagline: string;        // accroche du hero
+  title: string;           // ex: "Développeur Front-End"
+  tagline: string;         // accroche du hero
   bio: string;
-  ctaLabel: string;       // texte du bouton principal
+  ctaLabel: string;        // texte du bouton principal
   cvUrl: string;           // CV différent selon le profil
   seoDescription: string;  // meta description pour le référencement
 }
@@ -25,6 +25,8 @@ export type SocialPlatform =
   | "linkedin"
   | "twitter"
   | "email"
+  | "phone"
+  | "whatsapp"
   | "other";
 
 export interface SocialLink {
@@ -34,25 +36,59 @@ export interface SocialLink {
 }
 
 export interface Identity {
-  name: string;
-  location?: string;
-  availability: string; // ex: "Recherche active - Stage/Emploi"
+  initials: string;
+  firstName: string;
+  lastName: string;
+  location: {
+    city: string;
+    country: string;
+  };
+  availability: {
+    status: string;
+    opportunities: string[];
+    workMode: string[];
+  };
+  stats: {
+    experienceYears: number;
+    learningYears: number;
+  };
   socials: SocialLink[];
 }
 
 // ─────────────────────────────
-// Compétences (outils & concepts)
+// Technos (stacks) — couleur de marque, pas de statut
 // ─────────────────────────────
 
-export type SkillCategory = "tool" | "concept";
-export type SkillLevel = "mastered" | "learning";
-
-export interface Skill {
+export interface TechStack {
   name: string;
-  category: SkillCategory;
-  level: SkillLevel;
-  profiles: ProfileType[]; // à quel(s) profil(s) cette compétence s'affiche
+  bgColor: string;
+  borderColor: string;
 }
+
+// ─────────────────────────────
+// Compétences (concepts) — statut, pas de couleur
+// ─────────────────────────────
+
+export type CompetenceStatus = "mastered" | "learning" | "planned";
+
+export interface Competence {
+  name: string;
+  status: CompetenceStatus;
+  description?: string;
+}
+
+// ─────────────────────────────
+// Structure commune : groupé par profil
+// ─────────────────────────────
+
+export interface ByProfile<T> {
+  front: T[];
+  back: T[];
+  fullstack: T[];
+}
+
+export type TechnosData = ByProfile<TechStack>;
+export type CompetencesData = ByProfile<Competence>;
 
 // ─────────────────────────────
 // Projets
@@ -68,7 +104,7 @@ export interface ProjectImage {
 export interface ProjectMedia {
   thumbnail: ProjectImage;
   gallery?: ProjectImage[]; // optionnelle
-  videoUrl?: string;         // optionnelle
+  videoUrl?: string;        // optionnelle
 }
 
 export interface Project {
@@ -85,5 +121,7 @@ export interface Project {
   featured: boolean;
   order: number;
   tags: string[];
+  mainFeatures?: string[];
+  challenges?: string[];
   media: ProjectMedia;
 }

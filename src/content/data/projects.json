@@ -1,30 +1,257 @@
 [
   {
-    "id": "proj-001",
-    "name": "TaskFlow",
-    "description": "Application de gestion de tâches en équipe avec suivi en temps réel.",
-    "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
-    "role": "Solo",
-    "liveUrl": "https://taskflow-demo.vercel.app",
-    "githubUrl": "https://github.com/alexmwamba/taskflow",
-    "highlight": "J'ai optimisé le rendu des listes de tâches avec la virtualisation, ce qui a réduit le temps de chargement de 40% sur les grandes listes.",
+    "id": "izina-front",
+    "name": "Izina",
+    "description": "Catalogue communautaire de prénoms éwé (Togo), avec recherche filtrée (genre, ethnie, jour de naissance), favoris, partage et consultation hors-ligne.",
+    "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "React Query", "PWA/Service Worker"],
+    "role": "Développeur Front-End (projet solo)",
+    "highlight": "Interface pensée offline-first (PWA) : consultation et navigation possibles sans connexion, avec synchronisation transparente des contributions dès le retour du réseau.",
     "status": "done",
-    "profiles": ["front", "fullstack"],
+    "profiles": ["front"],
     "featured": true,
     "order": 1,
-    "tags": ["Productivité", "Dashboard"],
+    "tags": ["PWA", "Offline-first", "i18n", "UI communautaire"],
+    "mainFeatures": [
+      "Catalogue de prénoms filtrable (genre, ethnie, jour de naissance)",
+      "Favoris, likes, commentaires, partage, téléchargement de fiche",
+      "Générateur aléatoire filtré (choisir un prénom)",
+      "Formulaire de contribution avec retour de validation IA en temps réel",
+      "Mode hors-ligne (PWA) pour consultation sans réseau"
+    ],
+    "challenges": [
+      "Rendre le contenu consultable hors-ligne via PWA tout en synchronisant proprement les contributions soumises sans connexion"
+    ],
     "media": {
-      "thumbnail": {
-        "url": "/images/projects/taskflow-cover.jpg",
-        "altText": "Interface principale de TaskFlow montrant un tableau kanban avec des colonnes de tâches"
-      },
-      "gallery": [
-        {
-          "url": "/images/projects/taskflow-detail.jpg",
-          "altText": "Vue détaillée d'une tâche avec ses sous-tâches et commentaires"
-        }
-      ],
-      "videoUrl": "https://youtube.com/watch?v=exemple"
+      "thumbnail": { "url": "/images/projects/image-front-1.jpeg", "altText": "Interface du catalogue de prénoms Izina, vue front-end" },
+      "videoUrl": "/videos/projects/video-front-1.mp4"
+    }
+  },
+  {
+    "id": "izina-back",
+    "name": "Izina",
+    "description": "API et logique métier du catalogue communautaire Izina : modération IA asynchrone, authentification, notifications et gestion des contributions.",
+    "stack": ["NestJS", "TypeScript", "MongoDB", "Prisma", "Redis", "BullMQ", "Socket.IO"],
+    "role": "Développeur Back-End (projet solo)",
+    "highlight": "Intégration d'une API IA pour corriger l'orthographe éwé et enrichir les explications soumises par la communauté — traitement asynchrone via file d'attente (queue), jamais bloquant pour l'utilisateur.",
+    "status": "done",
+    "profiles": ["back"],
+    "featured": true,
+    "order": 1,
+    "tags": ["MongoDB", "NestJS", "IA/LLM", "RBAC", "Modération communautaire", "OAuth"],
+    "mainFeatures": [
+      "Pipeline de validation IA asynchrone (queue) pour l'orthographe éwé",
+      "Authentification JWT + OAuth Google/Facebook",
+      "Notifications multi-canal (email/SMS/in-app) et rappels d'anniversaire",
+      "Système de badges pour les contributeurs actifs",
+      "API de recherche et filtrage du catalogue"
+    ],
+    "challenges": [
+      "Concevoir un workflow de modération assisté par IA qui reste culturellement fiable (garde-fou humain, pas de publication 100% automatique)",
+      "Modéliser des relations propres en MongoDB (interactions embarquées + compteurs dénormalisés) sans sacrifier la cohérence des données"
+    ],
+    "media": {
+      "thumbnail": { "url": "/images/projects/image-back-1.jpeg", "altText": "Schéma d'architecture back-end du projet Izina" },
+      "videoUrl": "/videos/projects/video-back-1.mp4"
+    }
+  },
+  {
+    "id": "izina-fullstack",
+    "name": "Izina",
+    "description": "Catalogue communautaire de prénoms éwé (Togo) avec validation orthographique assistée par IA, pensé pour préserver et transmettre un patrimoine linguistique peu documenté numériquement.",
+    "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "React Query", "PWA", "NestJS", "MongoDB", "Prisma", "Redis", "BullMQ", "Socket.IO"],
+    "role": "Développeur Full-Stack (solo)",
+    "highlight": "Intégration d'une API IA pour corriger l'orthographe éwé et enrichir les explications soumises par la communauté — traitement asynchrone via queue, jamais bloquant pour l'utilisateur.",
+    "status": "done",
+    "profiles": ["fullstack"],
+    "featured": true,
+    "order": 1,
+    "tags": ["MongoDB", "NestJS", "IA/LLM", "PWA", "Offline-first", "i18n", "RBAC", "Modération communautaire", "OAuth"],
+    "mainFeatures": [
+      "Catalogue de prénoms filtrable (genre, ethnie, jour de naissance)",
+      "Contribution communautaire avec validation IA de l'orthographe",
+      "Favoris, likes, commentaires, partage, téléchargement de fiche",
+      "Générateur aléatoire filtré (choisir un prénom)",
+      "Authentification JWT + OAuth Google/Facebook",
+      "Notifications multi-canal (email/SMS/in-app) et rappels d'anniversaire",
+      "Système de badges pour les contributeurs actifs",
+      "Mode hors-ligne (PWA) pour consultation sans réseau"
+    ],
+    "challenges": [
+      "Concevoir un workflow de modération assisté par IA qui reste culturellement fiable (garde-fou humain, pas de publication 100% automatique)",
+      "Modéliser des relations propres en MongoDB sans sacrifier la cohérence des données",
+      "Rendre le contenu consultable hors-ligne via PWA tout en synchronisant proprement les contributions soumises sans connexion"
+    ],
+    "media": {
+      "thumbnail": { "url": "/images/projects/image-fullstack-1.jpeg", "altText": "Vue d'ensemble de l'application Izina, front et back" },
+      "videoUrl": "/videos/projects/video-fullstack-1.mp4"
+    }
+  },
+  {
+    "id": "autogo-front",
+    "name": "Autogo",
+    "description": "Interface terrain pour collecteurs de tontine/microfinance, pensée mobile-first et utilisable sans connexion, avec saisie rapide des cotisations et remboursements.",
+    "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Zustand", "PWA/Service Worker (offline-first)"],
+    "role": "Développeur Front-End (projet solo)",
+    "highlight": "Interface de collecte terrain conçue pour fonctionner intégralement hors-ligne, avec file d'attente locale des opérations en attendant la synchronisation.",
+    "status": "in-progress",
+    "profiles": ["front"],
+    "featured": false,
+    "order": 2,
+    "tags": ["Offline-first", "Fintech", "Mobile-first"],
+    "mainFeatures": [
+      "Enregistrement de collecte terrain fonctionnant hors-ligne",
+      "Espace client pour consulter solde et historique",
+      "Dashboard superviseur (activité des collecteurs, alertes de retard)"
+    ],
+    "challenges": [
+      "Concevoir une interface fiable pour des collecteurs peu familiers avec la technologie, utilisable en conditions de terrain réelles"
+    ],
+    "media": {
+      "thumbnail": { "url": "/images/projects/image-front-2.jpeg", "altText": "Interface de collecte terrain Autogo, vue front-end" },
+      "videoUrl": "/videos/projects/video-front-2.mp4"
+    }
+  },
+  {
+    "id": "autogo-back",
+    "name": "Autogo",
+    "description": "Architecture back-end de digitalisation de la collecte terrain pour institutions de microfinance : cotisations, remboursements, paiement Mobile Money (Flooz, T-Money).",
+    "stack": ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "Redis", "BullMQ", "Socket.IO"],
+    "role": "Développeur Back-End (projet solo)",
+    "highlight": "Architecture offline-first réconciliée côté serveur : chaque collecte est horodatée au moment réel puis synchronisée, avec transactions ACID et idempotence sur les paiements Mobile Money.",
+    "status": "in-progress",
+    "profiles": ["back"],
+    "featured": false,
+    "order": 2,
+    "tags": ["PostgreSQL", "NestJS", "Fintech", "Transactions ACID", "Mobile Money", "Audit trail", "Webhooks"],
+    "mainFeatures": [
+      "Paiement cash ou Mobile Money direct (Flooz, T-Money) avec webhook de confirmation",
+      "Gestion d'échéancier de prêt (retard, pénalité) et de comptes épargne/tontine",
+      "Réconciliation quotidienne automatique (cash déclaré vs cash compté)",
+      "Système d'audit complet sur chaque opération financière",
+      "Notifications SMS (confirmation, rappel d'échéance)"
+    ],
+    "challenges": [
+      "Garantir l'intégrité financière malgré des collectes enregistrées hors-ligne (horodatage réel, immuabilité après synchronisation)",
+      "Gérer l'idempotence des webhooks Mobile Money pour éviter tout double traitement d'un paiement"
+    ],
+    "media": {
+      "thumbnail": { "url": "/images/projects/image-back-2.jpeg", "altText": "Schéma d'architecture back-end du projet Autogo" },
+      "videoUrl": "/videos/projects/video-back-2.mp4"
+    }
+  },
+  {
+    "id": "autogo-fullstack",
+    "name": "Autogo",
+    "description": "Application de digitalisation de la collecte terrain pour institutions de microfinance : remplace le carnet papier par un suivi numérique fiable, avec paiement cash ou Mobile Money.",
+    "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Zustand", "PWA", "NestJS", "PostgreSQL", "Prisma", "Redis", "BullMQ", "Socket.IO"],
+    "role": "Développeur Full-Stack (solo) — projet pensé pour un pilote réel avec une IMF",
+    "highlight": "Architecture offline-first pour les collecteurs terrain : chaque collecte est horodatée au moment réel, stockée localement, puis synchronisée et réconciliée automatiquement — avec transactions ACID et idempotence sur les paiements Mobile Money.",
+    "status": "in-progress",
+    "profiles": ["fullstack"],
+    "featured": false,
+    "order": 2,
+    "tags": ["PostgreSQL", "NestJS", "Fintech", "Offline-first", "Transactions ACID", "Mobile Money", "Audit trail", "RBAC", "Webhooks"],
+    "mainFeatures": [
+      "Enregistrement de collecte terrain fonctionnant hors-ligne avec synchronisation différée",
+      "Paiement cash ou Mobile Money direct (Flooz, T-Money) avec webhook de confirmation",
+      "Gestion d'échéancier de prêt et de comptes épargne/tontine",
+      "Réconciliation quotidienne automatique",
+      "Espace client et dashboard superviseur",
+      "Système d'audit complet et notifications SMS"
+    ],
+    "challenges": [
+      "Garantir l'intégrité financière malgré des collectes enregistrées hors-ligne",
+      "Gérer l'idempotence des webhooks Mobile Money",
+      "Concevoir un système d'audit et de réconciliation simple à opérer par une vraie équipe terrain"
+    ],
+    "media": {
+      "thumbnail": { "url": "/images/projects/image-fullstack-2.jpeg", "altText": "Vue d'ensemble de l'application Autogo, front et back" },
+      "videoUrl": "/videos/projects/video-fullstack-2.mp4"
+    }
+  },
+  {
+    "id": "kadi-front",
+    "name": "Kadi",
+    "description": "Interface permettant à tout professionnel de créer en quelques minutes un portfolio numérique : galerie, services/tarifs, avis clients, contact direct.",
+    "stack": ["Next.js", "Tailwind CSS", "React Query", "Zustand"],
+    "role": "UX Designer & Développeur Front-End (projet solo)",
+    "highlight": "Page publique en rendu SSR optimisée SEO, avec galerie photo/vidéo compressée (WebP, lazy loading) pour un chargement rapide même sur connexion faible.",
+    "status": "in-progress",
+    "profiles": ["front"],
+    "featured": false,
+    "order": 3,
+    "tags": ["SaaS", "Next.js", "SEO", "UX Design"],
+    "mainFeatures": [
+      "Création de portfolio guidée sans compétence technique (onboarding en 5 étapes)",
+      "Galerie photo/vidéo optimisée (compression, WebP, lazy loading, avant/après)",
+      "Contact direct (WhatsApp, téléphone, email) + réservation en ligne",
+      "Statistiques de trafic (vues, clics, partages, provenance)"
+    ],
+    "challenges": [
+      "Concevoir un onboarding assez simple pour des professionnels non-techniques, sans sacrifier la personnalisation"
+    ],
+    "media": {
+      "thumbnail": { "url": "/images/projects/image-front-3.jpeg", "altText": "Interface de création de portfolio Kadi, vue front-end" },
+      "videoUrl": "/videos/projects/video-front-3.mp4"
+    }
+  },
+  {
+    "id": "kadi-back",
+    "name": "Kadi",
+    "description": "Architecture back-end SaaS multi-tenant pour la plateforme Kadi : gestion des comptes, médias, abonnements et paiements.",
+    "stack": ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "Redis", "BullMQ", "JWT", "Docker", "Nginx", "GitHub Actions"],
+    "role": "Architecte Logiciel & Développeur Back-End (projet solo)",
+    "highlight": "Architecture modulaire multi-tenant logique avec cache Redis et traitement asynchrone des médias, authentification JWT + refresh token sécurisée.",
+    "status": "in-progress",
+    "profiles": ["back"],
+    "featured": false,
+    "order": 3,
+    "tags": ["SaaS", "NestJS", "PostgreSQL", "Multi-tenant", "RBAC", "CI/CD", "Docker"],
+    "mainFeatures": [
+      "Gestion multi-tenant logique des comptes professionnels",
+      "Traitement asynchrone des médias (compression, stockage S3)",
+      "Abonnements freemium avec paiement (Stripe + mobile money)",
+      "Sécurité renforcée (RBAC, rate limiting, RGPD, 2FA admin)",
+      "CI/CD complet (GitHub Actions, Docker, déploiement automatisé)"
+    ],
+    "challenges": [
+      "Concevoir une architecture multi-tenant logique performante sans la complexité d'une vraie séparation par base de données"
+    ],
+    "media": {
+      "thumbnail": { "url": "/images/projects/image-back-3.jpeg", "altText": "Schéma d'architecture back-end du projet Kadi" },
+      "videoUrl": "/videos/projects/video-back-3.mp4"
+    }
+  },
+  {
+    "id": "kadi-fullstack",
+    "name": "Kadi",
+    "description": "Plateforme SaaS permettant à tout professionnel (artisan, esthéticienne, photographe, coach, consultant...) de créer un portfolio numérique professionnel, partageable via un simple lien.",
+    "stack": ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "Redis", "BullMQ", "JWT", "Next.js", "Tailwind CSS", "React Query", "Zustand", "Docker", "Nginx", "GitHub Actions"],
+    "role": "Product Manager, UX Designer, Architecte Logiciel & Développeur Full-Stack",
+    "highlight": "Architecture modulaire scalable (multi-tenant logique, cache Redis, traitement asynchrone des médias), authentification JWT + refresh token, page publique SSR optimisée SEO, modèle SaaS freemium.",
+    "status": "in-progress",
+    "profiles": ["fullstack"],
+    "featured": false,
+    "order": 3,
+    "tags": ["SaaS", "NestJS", "Next.js", "PostgreSQL", "Prisma", "Redis", "Multi-tenant", "RBAC", "CI/CD", "Docker"],
+    "mainFeatures": [
+      "Création de portfolio guidée sans compétence technique (onboarding en 5 étapes)",
+      "Galerie photo/vidéo optimisée",
+      "Services & tarifs personnalisables par métier",
+      "Contact direct + réservation en ligne",
+      "Avis clients modérés",
+      "Statistiques de trafic",
+      "Abonnements freemium avec paiement (Stripe + mobile money)",
+      "Sécurité renforcée et CI/CD complet"
+    ],
+    "challenges": [
+      "Concevoir une architecture multi-tenant logique performante et scalable",
+      "Créer un onboarding simple pour des professionnels non-techniques",
+      "Assurer une page publique SSR rapide et optimisée SEO"
+    ],
+    "media": {
+      "thumbnail": { "url": "/images/projects/image-fullstack-3.jpeg", "altText": "Vue d'ensemble de l'application Kadi, front et back" },
+      "videoUrl": "/videos/projects/video-fullstack-3.mp4"
     }
   }
 ]

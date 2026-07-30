@@ -1,19 +1,36 @@
-[
-  { "name": "HTML / CSS", "category": "tool", "level": "mastered", "profiles": ["front", "fullstack"] },
-  { "name": "JavaScript", "category": "tool", "level": "mastered", "profiles": ["front", "back", "fullstack"] },
-  { "name": "TypeScript", "category": "tool", "level": "mastered", "profiles": ["front", "back", "fullstack"] },
-  { "name": "React", "category": "tool", "level": "mastered", "profiles": ["front", "fullstack"] },
-  { "name": "Next.js", "category": "tool", "level": "mastered", "profiles": ["front", "fullstack"] },
-  { "name": "Tailwind CSS", "category": "tool", "level": "mastered", "profiles": ["front", "fullstack"] },
-  { "name": "Node.js", "category": "tool", "level": "learning", "profiles": ["back", "fullstack"] },
-  { "name": "Express", "category": "tool", "level": "learning", "profiles": ["back", "fullstack"] },
-  { "name": "PostgreSQL", "category": "tool", "level": "learning", "profiles": ["back", "fullstack"] },
-
-  { "name": "Responsive / Mobile-first", "category": "concept", "level": "mastered", "profiles": ["front", "fullstack"] },
-  { "name": "Accessibilité (WCAG)", "category": "concept", "level": "mastered", "profiles": ["front", "fullstack"] },
-  { "name": "Gestion d'état", "category": "concept", "level": "mastered", "profiles": ["front", "fullstack"] },
-  { "name": "Authentification (JWT)", "category": "concept", "level": "learning", "profiles": ["back", "fullstack"] },
-  { "name": "API REST", "category": "concept", "level": "learning", "profiles": ["back", "fullstack"] },
-  { "name": "Cache", "category": "concept", "level": "learning", "profiles": ["back", "fullstack"] },
-  { "name": "Sécurité (CORS, injections)", "category": "concept", "level": "learning", "profiles": ["back", "fullstack"] }
-]
+{
+  "front": [
+    { "name": "Responsive / Mobile-first", "status": "mastered", "description": "Construire des interfaces qui s'adaptent proprement à toutes les tailles d'écran, mobile en priorité." },
+    { "name": "Accessibilité (WCAG)", "status": "mastered", "description": "Contraste, navigation clavier, textes alternatifs — rendre une interface utilisable par tous." },
+    { "name": "Gestion d'état", "status": "mastered", "description": "Organiser les données côté client (state local, global, serveur) de façon cohérente." },
+    { "name": "PWA & mode hors-ligne", "status": "mastered", "description": "Rendre une application utilisable sans connexion et synchroniser les données au retour du réseau." }
+  ],
+  "back": [
+    { "name": "Authentification (JWT/OAuth)", "status": "mastered", "description": "Sécuriser l'accès à une application via des tokens et des fournisseurs d'identité externes." },
+    { "name": "API REST", "status": "mastered", "description": "Concevoir des endpoints clairs, cohérents et versionnés pour exposer une logique métier." },
+    { "name": "RBAC (rôles & permissions)", "status": "mastered", "description": "Restreindre les actions possibles selon le rôle de l'utilisateur." },
+    { "name": "Traitement asynchrone (queues)", "status": "mastered", "description": "Déporter les tâches lentes hors du parcours principal de l'utilisateur." },
+    { "name": "Cache", "status": "learning", "description": "Réduire la charge serveur et accélérer les réponses en stockant temporairement des données fréquentes." },
+    { "name": "Sécurité (CORS, injections)", "status": "learning", "description": "Protéger une API contre les accès non autorisés et les failles d'injection courantes." },
+    { "name": "Transactions ACID", "status": "learning", "description": "Garantir la cohérence des données financières même en cas d'erreur en cours d'opération." },
+    { "name": "Idempotence & Webhooks", "status": "learning", "description": "Éviter qu'un même paiement ou événement externe soit traité deux fois par erreur." },
+    { "name": "Architecture multi-tenant", "status": "learning", "description": "Isoler les données de plusieurs clients dans une même application partagée." },
+    { "name": "CI/CD", "status": "planned", "description": "Automatiser les tests et le déploiement à chaque modification du code." },
+    { "name": "Conteneurisation", "status": "planned", "description": "Packager une application avec ses dépendances pour un déploiement reproductible." },
+    { "name": "RGPD & protection des données", "status": "planned", "description": "Gérer les données personnelles dans le respect des obligations légales." }
+  ],
+  "fullstack": [
+    { "name": "Responsive / Mobile-first", "status": "mastered", "description": "Construire des interfaces qui s'adaptent proprement à toutes les tailles d'écran, mobile en priorité." },
+    { "name": "Accessibilité (WCAG)", "status": "mastered", "description": "Contraste, navigation clavier, textes alternatifs — rendre une interface utilisable par tous." },
+    { "name": "Authentification (JWT/OAuth)", "status": "mastered", "description": "Sécuriser l'accès à une application via des tokens et des fournisseurs d'identité externes." },
+    { "name": "API REST", "status": "mastered", "description": "Concevoir des endpoints clairs, cohérents et versionnés pour exposer une logique métier." },
+    { "name": "RBAC (rôles & permissions)", "status": "mastered", "description": "Restreindre les actions possibles selon le rôle de l'utilisateur." },
+    { "name": "Traitement asynchrone (queues)", "status": "mastered", "description": "Déporter les tâches lentes hors du parcours principal de l'utilisateur." },
+    { "name": "Cache", "status": "learning", "description": "Réduire la charge serveur et accélérer les réponses en stockant temporairement des données fréquentes." },
+    { "name": "Sécurité (CORS, injections)", "status": "learning", "description": "Protéger une API contre les accès non autorisés et les failles d'injection courantes." },
+    { "name": "Transactions ACID", "status": "learning", "description": "Garantir la cohérence des données financières même en cas d'erreur en cours d'opération." },
+    { "name": "Architecture multi-tenant", "status": "learning", "description": "Isoler les données de plusieurs clients dans une même application partagée." },
+    { "name": "CI/CD", "status": "planned", "description": "Automatiser les tests et le déploiement à chaque modification du code." },
+    { "name": "Conteneurisation", "status": "planned", "description": "Packager une application avec ses dépendances pour un déploiement reproductible." }
+  ]
+}
