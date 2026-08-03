@@ -2,8 +2,17 @@
   {
     "type": "front",
     "title": "Développeur Front-End",
-    "tagline": "Je crée des interfaces web modernes, intuitives et performantes avec React et Next.js.",
-    "bio": "Je développe des interfaces pensées pour offrir une expérience utilisateur fluide, agréable et accessible. J'aime transformer des idées en interfaces propres, responsives et adaptées aux besoins des utilisateurs en utilisant les technologies modernes du web.",
+
+  "tagline": [
+    "Je crée des interfaces web modernes, intuitives et performantes avec ",
+    "React",
+    " et ",
+    "Next.js", 
+    ".",
+    " Basé à Lomé, je transforme vos idées en expériences digitales exceptionnelles."
+   
+  ]
+,    "bio": "Je développe des interfaces pensées pour offrir une expérience utilisateur fluide, agréable et accessible. J'aime transformer des idées en interfaces propres, responsives et adaptées aux besoins des utilisateurs en utilisant les technologies modernes du web.",
     "ctaLabel": "Découvrir mes projets",
     "cvUrl": "/cv/gamatho-frontend.pdf",
     "seoDescription": "Portfolio de Gamatho Joel Dzidula Koffi, développeur Front-End spécialisé dans la création d'interfaces modernes avec React et Next.js."

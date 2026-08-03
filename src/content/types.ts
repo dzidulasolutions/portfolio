@@ -61,20 +61,24 @@ export interface Identity {
 
 export interface TechStack {
   name: string;
+  description: string;
+  icon: string; // vide pour l'instant, tu rempliras (nom d'icône ou emoji ou chemin SVG)
   bgColor: string;
   borderColor: string;
+  level: number; // 0-100, pilote la barre de progression
 }
 
 // ─────────────────────────────
 // Compétences (concepts) — statut, pas de couleur
 // ─────────────────────────────
 
-export type CompetenceStatus = "mastered" | "learning" | "planned";
-
 export interface Competence {
   name: string;
-  status: CompetenceStatus;
-  description?: string;
+  description: string;
+  icon: string;
+  bgColor: string;
+  borderColor: string;
+  level: number; // 0-100
 }
 
 // ─────────────────────────────
