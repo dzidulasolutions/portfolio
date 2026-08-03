@@ -1,13 +1,20 @@
 import type { ReactNode } from "react";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import type { TechStack } from "@/content/types";
 
-export function PageShell({ children }: { children: ReactNode }) {
+interface PageShellProps {
+  children: ReactNode;
+  technos?: TechStack[];
+}
+
+export function PageShell({ children, technos }: PageShellProps) {
   return (
     <>
       <Navbar />
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">{children}</main>
-      <Footer />
+      <div className="grid-background" />
+      <main className="grid-wrapper">{children}</main>
+      <Footer technos={technos} />
     </>
   );
 }
