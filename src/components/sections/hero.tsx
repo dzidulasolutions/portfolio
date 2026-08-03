@@ -1,68 +1,71 @@
-import Image from "next/image";
 import type { Profile } from "@/content/types";
 import identity from "@/content/data/identity.json";
+import { DEVELOPER_SNIPPETS } from "@/content/data/developer-snippet";
+import { CodeWindow } from "@/components/ui/code-window";
+
+export interface HeroStat {
+  value: string;
+  label: string;
+}
 
 interface HeroProps {
   profile: Profile;
+  stats: HeroStat[];
 }
 
-export function Hero({ profile }: HeroProps) {
+export function Hero({ profile, stats }: HeroProps) {
   return (
-    <section
-      id="accueil"
-      className="relative min-h-screen flex flex-col md:flex-row items-center overflow-hidden"
-    >
-      {/* Zone de texte */}
-      <div className="relative z-10 w-full md:w-1/2 px-4 sm:px-6 lg:px-8 pt-28 md:pt-0 flex flex-col items-center md:items-start text-center md:text-left gap-6">
-        {/* Photo mobile : avatar rond au-dessus du texte */}
-        <div className="md:hidden relative w-36 h-36 rounded-full overflow-hidden">
-          <Image
-            src="/images/profile-photo.png"
-            alt={`Photo de ${identity.name}`}
-            fill
-            priority
-            className="object-cover grayscale"
-          />
-          <div className="absolute inset-0 bg-accent-900 mix-blend-color" />
+    <section id="accueil" className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-15 relative min-h-screen flex flex-col lg:flex-row lg:items-start mt-8 gap-4">
+
+      <div className="flex-1 flex flex-col gap-4">
+        <div className="flex flex-wrap gap-3 mt-12 uppercase font-medium">
+
+          <div className="flex items-center gap-2.5 h-9 px-4 border border-accent-500/30 bg-accent-500/10">
+            <span className="h-2 w-2 rounded-full bg-accent-500 shrink-0" />
+            <span className="font-ui text-sm font-medium text-accent-500">{identity.availability.status}</span>
+            <span className="w-px h-4 bg-accent-500" />
+            <span className="font-ui text-sm font-medium text-accent-500">{identity.availability.opportunities.join(" · ")}</span> 
+          </div>
+
+          <div className="flex items-center gap-2 h-9 px-4 border border-accent-300/30 dark:border-accent-700 bg-accent-500/10 dark:bg-accent-500/20">
+            <i className="fi fi-sr-marker text-accent-500 dark:text-accent-500 text-xs" />
+            <span className="font-ui text-sm text-accent-500 dark:text-accent-500">{identity.availability.workMode.join(" · ")}</span>
+          </div>
+
         </div>
 
-        <div className="flex flex-col gap-3">
-          <p className="font-ui text-accent-600 dark:text-accent-400 text-sm uppercase tracking-wide">
-            {identity.availability}
-          </p>
-          <h1 className="font-title text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-            {identity.name}
-          </h1>
-          <p className="font-ui text-xl sm:text-2xl text-neutral-600 dark:text-neutral-300">
-            {profile.title}
-          </p>
-          <p className="font-body text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
-            {profile.tagline}
-          </p>
+        <div className="flex flex-col gap-1 font-title text-4xl sm:text-5xl lg:text-5xl font-semibold text-start text-foreground leading-tight max-w-4xl">
+          <h1 className="text-gradient font-malison">{identity.firstName}</h1>
+          <h1 className="text-gradient font-malison">{identity.lastName}</h1>
+          <p className="font-ui text-[1.2rem] mt-4 sm:text-lg uppercase text-neutral-500 dark:text-neutral-400 tracking-wide">{profile.title}</p>
         </div>
 
-        
-          <a href="#contact"
-          className="font-ui inline-flex items-center justify-center px-6 py-3 rounded-full bg-accent-500 text-white hover:bg-accent-600 transition-colors"
-        >
-          {profile.ctaLabel}
-        </a>
+        <p className="font-ui mt-4 text-sm font-medium text-justify sm:text-base text-neutral-500 dark:text-neutral-400 max-w-2xl">{profile.tagline}</p>
+
+        <div className="flex flex-wrap w-full lg:w-auto justify-start items-center gap-6">
+          <a href="#contact" className="w-full lg:w-auto bg-gradient hover:opacity-90 uppercase text-white font-ui text-sm inline-flex items-center font-medium justify-center px-6 py-4 transition-opacity">{profile.ctaLabel}</a>
+          <a href={profile.cvUrl} download className="w-full lg:w-auto bg-gradient hover:opacity-90 uppercase text-white font-ui text-sm inline-flex items-center justify-center px-6 py-4 font-medium transition-opacity">Télécharger mon CV</a>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-12 pt-8 mt-8 border-t border-neutral-200 dark:border-neutral-800 w-full max-w-3xl">
+          {stats.map((stat) => (
+            <div key={stat.label} className="flex flex-col items-start justify-center gap-1">
+              <span className="font-malison text-center text-3xl sm:text-4xl font-bold text-gradient">
+                {stat.value}
+              </span>
+              <span className="font-ui text-xs sm:text-sm uppercase text-neutral-500 dark:text-neutral-400 tracking-wide">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Photo desktop en arrière-plan à droite */}
-      <div className="hidden md:block absolute inset-y-0 right-0 w-1/2 h-full">
-        <Image
-          src="/images/profile-photo.png"
-          alt={`Photo de ${identity.name}`}
-          fill
-          priority
-          className="object-cover grayscale"
-        />
-        {/* Superposition duotone teintée accent */}
-        <div className="absolute inset-0 bg-accent-900 mix-blend-color" />
-        {/* Fondu vers le fond de la page (bord gauche) */}
-        <div className="absolute inset-0 bg-linear-to-r from-background via-background/40 to-transparent" />
+      {/* Colonne capture de code (droite, cachée sur mobile) */}
+      <div className="hidden lg:flex flex-1 items-center justify-center">
+        <CodeWindow fileName="developer.ts" lines={DEVELOPER_SNIPPETS[profile.type]} />
       </div>
+
     </section>
   );
 }
