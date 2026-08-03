@@ -24,3 +24,11 @@ export const roboto = localFont({
   variable: "--font-roboto",
   display: "swap",
 });
+
+export const malison = localFont({
+  src: "../../public/fonts/moon_get-Heavy.ttf",
+  weight: "100 900",
+  style: "normal",
+  variable: "--font-malison",
+  display: "swap",
+});

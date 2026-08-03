@@ -11,7 +11,7 @@
   --color-neutral-600: #5a5d63;
   --color-neutral-700: #42454c;
   --color-neutral-800: #2f3239;
-  --color-neutral-900: #232526;
+  --color-neutral-900: #ffffff;
 
   /* Échelle accent (calculée à partir de ton bleu) */
   --color-accent-50: #e6f2fa;
@@ -19,7 +19,7 @@
   --color-accent-200: #99cce9;
   --color-accent-300: #66b3de;
   --color-accent-400: #3399d3;
-  --color-accent-500: #0080c8;
+  --color-accent-500: #133458;
   --color-accent-600: #006daa;
   --color-accent-700: #005a8c;
   --color-accent-800: #00466e;
@@ -33,15 +33,16 @@
   --font-title: var(--font-sora), sans-serif;
   --font-ui: var(--font-google-sans), sans-serif;
   --font-body: var(--font-roboto), sans-serif;
+  --font-malison: var(--font-malison), sans-serif;
 }
 
 :root {
   --color-bg: #f8f7f9;
-  --color-text: #232526;
+  --color-text: #212121;
 }
 
 .dark {
-  --color-bg: #232526;
+  --color-bg: #212121;
   --color-text: #f8f7f9;
 }
 
@@ -52,9 +53,51 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #0080c8 0%, #00c2a8 100%);
+  background: linear-gradient(135deg, #133458 0%, #00c2a8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: #0080c8; /* Fallback */
+  color: #133458; /* Fallback */
+}
+
+.bg-gradient{
+    background: linear-gradient(135deg, #133458 0%, #00c2a8 100%);
+}
+
+/* From Uiverse.io by Gautammsharma */ 
+.grid-wrapper {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.grid-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background-image: linear-gradient(to right, hsla(202, 100%, 39%, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, hsla(202, 100%, 39%, 0.06) 1px, transparent 1px);
+  background-size: 20px 30px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 70% 60% at 50% 0%,
+    #000 60%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 70% 60% at 50% 0%,
+    #000 60%,
+    transparent 100%
+  );
+}
+
+.card {
+  transition: all 0.3s ease;
+  
+}
+
+.card:hover {
+  border-color: var(--hover-color);
 }
