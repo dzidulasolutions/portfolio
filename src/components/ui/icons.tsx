@@ -82,3 +82,21 @@ export const IconlyExternalLink = ({ size = 24, color = "#000000" }: IconlyIconP
     </svg>
   );
 };
+
+export const IconlyPin = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 22s7-7.16 7-12A7 7 0 0 0 5 10c0 4.84 7 12 7 12z" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="12" cy="10" r="2.5" stroke={color} strokeWidth="1.5" />
+    </svg>
+  );
+};
+
+export const IconlyBriefcase = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3" y="7" width="18" height="13" rx="2" stroke={color} strokeWidth="1.5" />
+      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke={color} strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+};
