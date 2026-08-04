@@ -44,7 +44,6 @@ export function Hero({ profile, stats }: HeroProps) {
 
         <div className="flex flex-wrap w-full lg:w-auto justify-start items-center gap-6">
           <a href="#contact" className="w-full lg:w-auto bg-gradient hover:opacity-90 uppercase text-white font-ui text-sm inline-flex items-center font-medium justify-center px-6 py-4 transition-opacity">{profile.ctaLabel}</a>
-          <a href={profile.cvUrl} download className="w-full lg:w-auto bg-gradient hover:opacity-90 uppercase text-white font-ui text-sm inline-flex items-center justify-center px-6 py-4 font-medium transition-opacity">Télécharger mon CV</a>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-12 pt-8 mt-8 border-t border-neutral-200 dark:border-neutral-800 w-full max-w-3xl">
