@@ -1,0 +1,46 @@
+{
+  "headline": {
+    "line1": "Développeur passionné",
+    "line2": "par les solutions concrètes"
+  },
+  "paragraph2": "Je m'intéresse particulièrement aux architectures robustes : traitement asynchrone, synchronisation hors-ligne, sécurité des transactions — des problématiques que j'ai directement affrontées sur des projets comme Izina, Autogo et Kadi.",
+  "facts": [
+    { "icon": "", "text": "Lomé, Togo" },
+    { "icon": "", "text": "1 an d'expérience en développement web" },
+    { "icon": "", "text": "Certifié Simplon Côte d'Ivoire" },
+    { "icon": "", "text": "Architectures offline-first & asynchrones" },
+    { "icon": "", "text": "Français" }
+  ],
+  "domainCards": {
+    "front": [
+      {
+        "title": "Développement Front-End",
+        "subtitle": "React • Next.js • TypeScript",
+        "description": "Applications web modernes avec React, Next.js (App Router) et TypeScript. Interfaces responsives, accessibles, et pensées mobile-first.",
+        "tags": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+      }
+    ],
+    "back": [
+      {
+        "title": "Développement Back-End",
+        "subtitle": "Node.js • NestJS • MongoDB",
+        "description": "API robustes avec NestJS, traitement asynchrone via queues, authentification sécurisée. Architecture pensée pour des cas d'usage réels : paiement, données hors-ligne, multi-tenant.",
+        "tags": ["NestJS", "MongoDB", "Prisma", "Redis"]
+      }
+    ],
+    "fullstack": [
+      {
+        "title": "Développement Front-End",
+        "subtitle": "React • Next.js • TypeScript",
+        "description": "Applications web modernes avec React, Next.js (App Router) et TypeScript. Interfaces responsives, accessibles, et pensées mobile-first.",
+        "tags": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "title": "Développement Back-End",
+        "subtitle": "Node.js • NestJS • MongoDB",
+        "description": "API robustes avec NestJS, traitement asynchrone via queues, authentification sécurisée. Architecture pensée pour des cas d'usage réels : paiement, données hors-ligne, multi-tenant.",
+        "tags": ["NestJS", "MongoDB", "Prisma", "Redis"]
+      }
+    ]
+  }
+}

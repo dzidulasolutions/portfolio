@@ -129,3 +129,24 @@ export interface Project {
   challenges?: string[];
   media: ProjectMedia;
 }
+
+// A propos
+
+export interface AboutFact {
+  icon: string;
+  text: string;
+}
+
+export interface DomainCard {
+  title: string;
+  subtitle: string;
+  description: string;
+  tags: string[];
+}
+
+export interface AboutData {
+  headline: { line1: string; line2: string };
+  paragraph2: string;
+  facts: AboutFact[];
+  domainCards: ByProfile<DomainCard>;
+}

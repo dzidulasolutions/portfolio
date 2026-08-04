@@ -12,8 +12,8 @@
     "workMode": ["Présentiel", "Remote"]
   },
   "stats": {
-    "experienceYears": 0,
-    "learningYears": 0
+    "experienceYears": 1,
+    "learningYears": 2
   },
   "socials": [
     { "platform": "email", "url": "mailto:ton-email@example.com" },
