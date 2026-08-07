@@ -1,6 +1,5 @@
-// src/components/sections/contact.tsx
 import type { Profile, SocialPlatform } from "@/content/types";
-import { IconlyGithub, IconlyLinkedin, IconlyTwitter, IconlyEmail, IconlyExternalLink } from "@/components/ui/icons";
+import { IconlyGithub, IconlyLinkedin,IconlyWhatsapp, IconlyCall, IconlyTwitter, IconlyEmail, IconlyExternalLink } from "@/components/ui/icons";
 import identity from "@/content/data/identity.json";
 
 interface ContactProps {
@@ -12,8 +11,8 @@ const SOCIAL_ICONS: Record<SocialPlatform, React.ComponentType<{ size?: number; 
   linkedin: IconlyLinkedin,
   twitter: IconlyTwitter,
   email: IconlyEmail,
-  phone: IconlyExternalLink,
-  whatsapp: IconlyExternalLink,
+  phone: IconlyCall,
+  whatsapp: IconlyWhatsapp,
   other: IconlyExternalLink,
 };
 

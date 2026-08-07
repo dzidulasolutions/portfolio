@@ -1,17 +1,63 @@
 import type { TechStack } from "@/content/types";
+import {
+  IconlyTailwind,
+  IconlyReact,
+  IconlyNext,
+  IconlyGit,
+  IconlyGithub,
+  IconlyResponsive,
+  IconlyAccessibility,
+  IconlyOffline,
+  IconlyState,
+  IconlyCode,
+  IconlyNode,
+  IconlyNest,
+  IconlyMongo,
+  IconlyPrisma,
+  IconlyPostgres,
+  IconlyRedis,
+  IconlySocketIo,
+  IconlyDocker,
+  IconlyGithubActions,
+} from "@/components/ui/icons";
 
 interface TechnosProps {
   stacks: TechStack[];
 }
 
+export const TECH_ICONS: Record <string, React.ComponentType<{ size?: number; color?: string }>> = {
+  IconlyTailwind,
+  IconlyReact,
+  IconlyNext,
+  IconlyGit,
+  IconlyGithub,
+  IconlyResponsive,
+  IconlyAccessibility,
+  IconlyOffline,
+  IconlyState, 
+  IconlyCode,
+  IconlyNode, 
+  IconlyNest, 
+  IconlyMongo,
+  IconlyPrisma,
+  IconlyPostgres,
+  IconlyRedis,
+  IconlySocketIo,
+  IconlyDocker,
+  IconlyGithubActions,
+  
+};
+
 function TechCard({ tech }: { tech: TechStack }) {
+  const Icon = TECH_ICONS[tech.icon];
+
   return (
     <div className="card flex flex-col gap-2 p-5 border border-gray-600/20 bg-neutral-700/10 dark:border-neutral-800"
-      style={{"--hover-color": tech.borderColor,} as React.CSSProperties}
+      style={{ "--hover-color": tech.borderColor, } as React.CSSProperties}
     >
       {/* Case icône */}
-      <div className="w-11 h-11 flex items-center bg-neutral-700/10 justify-center text-xl">
-        {tech.icon || "?"}
+      <div style={{backgroundColor: tech.bgColor}} className="w-11 h-11 flex items-center justify-center text-xl">
+        {Icon ? <Icon size={22} color={tech.borderColor} /> : "?"}
       </div>
 
       {/* Nom + description */}
@@ -44,8 +90,6 @@ export function Technos({ stacks }: TechnosProps) {
           <TechCard key={tech.name} tech={tech} />
         ))}
       </div>
-
-      
     </section>
   );
 }

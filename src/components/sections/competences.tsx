@@ -1,16 +1,53 @@
-// src/components/sections/competences.tsx
 import type { Competence } from "@/content/types";
+import {
+  IconlyResponsive,
+  IconlyAccessibility,
+  IconlyOffline,
+  IconlyState,
+  IconlyAuth,
+  IconlyDataProtection,
+  IconlyContainerization,
+  IconlyMultiTenant,
+  IconlyWebhooks,
+  IconlyTransactions,
+  IconlyInjection,
+  IconlyCache,
+  IconlyAsync,
+  IconlyCiCd,
+  IconlyApi,
+  IconlyRBAC,
+  
+} from "@/components/ui/icons";
 
 interface CompetencesProps {
   concepts: Competence[];
 }
+export const TECH_ICONS: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
+  IconlyResponsive,
+  IconlyAccessibility,
+  IconlyOffline,
+  IconlyState,
+  IconlyDataProtection,
+  IconlyContainerization,
+  IconlyMultiTenant,
+  IconlyWebhooks,
+  IconlyTransactions,
+  IconlyInjection,
+  IconlyCache,
+  IconlyAsync,
+  IconlyCiCd,
+  IconlyApi,
+  IconlyRBAC,
+  IconlyAuth
+};
 
 function CompetenceCard({ concept }: { concept: Competence }) {
+  const Icon = TECH_ICONS[concept.icon];
   return (
     <div className="card flex flex-col gap-4 p-5 border border-gray-600/20 bg-neutral-700/10 dark:border-neutral-800"
-      style={{"--hover-color": concept.borderColor,} as React.CSSProperties}>
-      <div className="w-11 h-11 flex items-center bg-neutral-700/10 justify-center text-xl">
-        {concept.icon || "?"}
+      style={{ "--hover-color": concept.borderColor, } as React.CSSProperties}>
+      <div style={{ backgroundColor: concept.bgColor }} className="w-11 h-11 flex items-center bg-neutral-700/10 justify-center text-xl">
+        {Icon ? <Icon size={22} color={concept.borderColor} /> : concept.icon || "?"}
       </div>
 
       <div className="flex flex-col gap-0.5">

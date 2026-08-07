@@ -1,36 +1,41 @@
 {
   "front": [
-    { "name": "Responsive / Mobile-first", "description": "Construire des interfaces qui s'adaptent proprement à toutes les tailles d'écran, mobile en priorité.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "Accessibilité (WCAG)", "description": "Contraste, navigation clavier, textes alternatifs — rendre une interface utilisable par tous.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "Gestion d'état", "description": "Organiser les données côté client (state local, global, serveur) de façon cohérente.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "PWA & mode hors-ligne", "description": "Rendre une application utilisable sans connexion et synchroniser les données au retour du réseau.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 }
-  ],
+    { "name": "Responsive / Mobile-first", "description": "Construire des interfaces qui s'adaptent proprement à toutes les tailles d'écran, mobile en priorité.", "icon": "IconlyResponsive", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "Accessibilité (WCAG)", "description": "Contraste, navigation clavier, textes alternatifs — rendre une interface utilisable par tous.", "icon": "IconlyAccessibility", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "Gestion d'état", "description": "Organiser les données côté client (state local, global, serveur) de façon cohérente.", "icon": "IconlyState", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "PWA & mode hors-ligne", "description": "Rendre une application utilisable sans connexion et synchroniser les données au retour du réseau.", "icon": "IconlyOffline", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 }
+  ], 
   "back": [
-    { "name": "Authentification (JWT/OAuth)", "description": "Sécuriser l'accès à une application via des tokens et des fournisseurs d'identité externes.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "API REST", "description": "Concevoir des endpoints clairs, cohérents et versionnés pour exposer une logique métier.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "RBAC (rôles & permissions)", "description": "Restreindre les actions possibles selon le rôle de l'utilisateur.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "Traitement asynchrone (queues)", "description": "Déporter les tâches lentes hors du parcours principal de l'utilisateur.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "Cache", "description": "Réduire la charge serveur et accélérer les réponses en stockant temporairement des données fréquentes.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
-    { "name": "Sécurité (CORS, injections)", "description": "Protéger une API contre les accès non autorisés et les failles d'injection courantes.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
-    { "name": "Transactions ACID", "description": "Garantir la cohérence des données financières même en cas d'erreur en cours d'opération.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
-    { "name": "Idempotence & Webhooks", "description": "Éviter qu'un même paiement ou événement externe soit traité deux fois par erreur.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
-    { "name": "Architecture multi-tenant", "description": "Isoler les données de plusieurs clients dans une même application partagée.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
-    { "name": "CI/CD", "description": "Automatiser les tests et le déploiement à chaque modification du code.", "icon": "", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 },
-    { "name": "Conteneurisation", "description": "Packager une application avec ses dépendances pour un déploiement reproductible.", "icon": "", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 },
-    { "name": "RGPD & protection des données", "description": "Gérer les données personnelles dans le respect des obligations légales.", "icon": "", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 }
-  ],
+    { "name": "Authentification (JWT/OAuth)", "description": "Sécuriser l'accès à une application via des tokens et des fournisseurs d'identité externes.", "icon": "IconlyAuth", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "API REST", "description": "Concevoir des endpoints clairs, cohérents et versionnés pour exposer une logique métier.", "icon": "IconlyApi", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "RBAC (rôles & permissions)", "description": "Restreindre les actions possibles selon le rôle de l'utilisateur.", "icon": "IconlyRBAC", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "Traitement asynchrone (queues)", "description": "Déporter les tâches lentes hors du parcours principal de l'utilisateur.", "icon": "IconlyAsync", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "Cache", "description": "Réduire la charge serveur et accélérer les réponses en stockant temporairement des données fréquentes.", "icon": "IconlyCache", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
+    { "name": "Sécurité (CORS, injections)", "description": "Protéger une API contre les accès non autorisés et les failles d'injection courantes.", "icon": "IconlyInjection", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
+    { "name": "Transactions ACID", "description": "Garantir la cohérence des données financières même en cas d'erreur en cours d'opération.", "icon": "IconlyTransactions", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
+    { "name": "Idempotence & Webhooks", "description": "Éviter qu'un même paiement ou événement externe soit traité deux fois par erreur.", "icon": "IconlyWebhooks", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
+    { "name": "Architecture multi-tenant", "description": "Isoler les données de plusieurs clients dans une même application partagée.", "icon": "IconlyMultiTenant", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
+    { "name": "CI/CD", "description": "Automatiser les tests et le déploiement à chaque modification du code.", "icon": "IconlyCiCd", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 },
+    { "name": "Conteneurisation", "description": "Packager une application avec ses dépendances pour un déploiement reproductible.", "icon": "IconlyContainerization", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 },
+    { "name": "RGPD & protection des données", "description": "Gérer les données personnelles dans le respect des obligations légales.", "icon": "IconlyDataProtection", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 }
+  ], 
   "fullstack": [
-    { "name": "Responsive / Mobile-first", "description": "Construire des interfaces qui s'adaptent proprement à toutes les tailles d'écran, mobile en priorité.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "Accessibilité (WCAG)", "description": "Contraste, navigation clavier, textes alternatifs — rendre une interface utilisable par tous.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "Authentification (JWT/OAuth)", "description": "Sécuriser l'accès à une application via des tokens et des fournisseurs d'identité externes.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "API REST", "description": "Concevoir des endpoints clairs, cohérents et versionnés pour exposer une logique métier.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "RBAC (rôles & permissions)", "description": "Restreindre les actions possibles selon le rôle de l'utilisateur.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "Traitement asynchrone (queues)", "description": "Déporter les tâches lentes hors du parcours principal de l'utilisateur.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
-    { "name": "Cache", "description": "Réduire la charge serveur et accélérer les réponses en stockant temporairement des données fréquentes.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
-    { "name": "Sécurité (CORS, injections)", "description": "Protéger une API contre les accès non autorisés et les failles d'injection courantes.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
-    { "name": "Transactions ACID", "description": "Garantir la cohérence des données financières même en cas d'erreur en cours d'opération.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
-    { "name": "Architecture multi-tenant", "description": "Isoler les données de plusieurs clients dans une même application partagée.", "icon": "", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
-    { "name": "CI/CD", "description": "Automatiser les tests et le déploiement à chaque modification du code.", "icon": "", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 },
-    { "name": "Conteneurisation", "description": "Packager une application avec ses dépendances pour un déploiement reproductible.", "icon": "", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 }
+   { "name": "Responsive / Mobile-first", "description": "Construire des interfaces qui s'adaptent proprement à toutes les tailles d'écran, mobile en priorité.", "icon": "IconlyResponsive", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "Accessibilité (WCAG)", "description": "Contraste, navigation clavier, textes alternatifs — rendre une interface utilisable par tous.", "icon": "IconlyAccessibility", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "Gestion d'état", "description": "Organiser les données côté client (state local, global, serveur) de façon cohérente.", "icon": "IconlyState", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "PWA & mode hors-ligne", "description": "Rendre une application utilisable sans connexion et synchroniser les données au retour du réseau.", "icon": "IconlyOffline", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "Authentification (JWT/OAuth)", "description": "Sécuriser l'accès à une application via des tokens et des fournisseurs d'identité externes.", "icon": "IconlyAuth", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "API REST", "description": "Concevoir des endpoints clairs, cohérents et versionnés pour exposer une logique métier.", "icon": "IconlyApi", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "RBAC (rôles & permissions)", "description": "Restreindre les actions possibles selon le rôle de l'utilisateur.", "icon": "IconlyRBAC", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "Traitement asynchrone (queues)", "description": "Déporter les tâches lentes hors du parcours principal de l'utilisateur.", "icon": "IconlyAsync", "bgColor": "#e6f2fa", "borderColor": "#006daa", "level": 90 },
+    { "name": "Cache", "description": "Réduire la charge serveur et accélérer les réponses en stockant temporairement des données fréquentes.", "icon": "IconlyCache", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
+    { "name": "Sécurité (CORS, injections)", "description": "Protéger une API contre les accès non autorisés et les failles d'injection courantes.", "icon": "IconlyInjection", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
+    { "name": "Transactions ACID", "description": "Garantir la cohérence des données financières même en cas d'erreur en cours d'opération.", "icon": "IconlyTransactions", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
+    { "name": "Idempotence & Webhooks", "description": "Éviter qu'un même paiement ou événement externe soit traité deux fois par erreur.", "icon": "IconlyWebhooks", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
+    { "name": "Architecture multi-tenant", "description": "Isoler les données de plusieurs clients dans une même application partagée.", "icon": "IconlyMultiTenant", "bgColor": "#e6f2fa", "borderColor": "#0080c8", "level": 55 },
+    { "name": "CI/CD", "description": "Automatiser les tests et le déploiement à chaque modification du code.", "icon": "IconlyCiCd", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 },
+    { "name": "Conteneurisation", "description": "Packager une application avec ses dépendances pour un déploiement reproductible.", "icon": "IconlyContainerization", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 },
+    { "name": "RGPD & protection des données", "description": "Gérer les données personnelles dans le respect des obligations légales.", "icon": "IconlyDataProtection", "bgColor": "#edecef", "borderColor": "#95979b", "level": 20 }
+
   ]
 }
