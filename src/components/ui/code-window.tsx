@@ -17,9 +17,9 @@ const TOKEN_COLOR: Record<CodeToken["type"], string> = {
 
 export function CodeWindow({ fileName, lines }: CodeWindowProps) {
   return (
-    <div className="w-full max-w-md rounded-xl overflow-hidden border border-accent-300 shadow-2xl">
+    <div className="w-full max-w-md mt-12 overflow-hidden border border-accent-300/30 ">
       {/* Barre de titre */}
-      <div className="flex items-center gap-2 px-4 py-3 bg-[#2d2d2d] border border-accent-300">
+      <div className="flex items-center gap-2 px-4 py-3 border-b border-accent-300/30">
         <span className="w-3 h-3 rounded-full bg-[#ff5f56]" />
         <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
         <span className="w-3 h-3 rounded-full bg-[#27c93f]" />
