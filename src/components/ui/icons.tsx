@@ -63,15 +63,15 @@ export const IconlyTwitter = ({ size = 24, color = "#000000" }: IconlyIconProps)
     <FaXTwitter size={size} color={color} />
 );
 
-  
-  export const IconlyEmail = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
-      return (
-		<svg width={size} height={size} viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M18.2039 8.85107L12.4399 13.5351L6.67493 8.85107" stroke={color} strokeWidth="1.5" strokeLinecap="square"></path>
-		<path d="M2.40002 3V21H22.4V3H2.40002Z" stroke={color} strokeWidth="1.5" strokeLinecap="square"></path>
-		</svg>
-      ) 
-  }
+
+export const IconlyEmail = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+    return (
+        <svg width={size} height={size} viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.2039 8.85107L12.4399 13.5351L6.67493 8.85107" stroke={color} strokeWidth="1.5" strokeLinecap="square"></path>
+            <path d="M2.40002 3V21H22.4V3H2.40002Z" stroke={color} strokeWidth="1.5" strokeLinecap="square"></path>
+        </svg>
+    )
+}
 
 export const IconlyWork = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
     return (
@@ -499,6 +499,15 @@ export const IconlyDataProtection = ({ size = 24, color = "#000000" }: IconlyIco
             </g>
         </svg>
 
+    )
+}
+
+export const Iconlydownload = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+    return (
+        <svg width={size} height={size} viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.2499 18.9001V4.49988" stroke={color} strokeWidth="2" strokeLinecap="square"></path>
+            <path d="M18.2745 13.4501L12.2505 19.5001L6.22546 13.4501" stroke={color} strokeWidth="2" strokeLinecap="square"></path>
+        </svg>
     )
 }
 
