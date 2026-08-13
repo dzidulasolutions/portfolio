@@ -17,7 +17,7 @@ function NavLink({ item, isActive, onClick }: { item: NavItem; isActive: boolean
     >
       {item.label}
       <motion.span
-        className="absolute left-0 -bottom-0.5 h-0.5 w-full bg-accent-500 origin-left"
+        className="absolute left-0 -bottom-0.5 h-0.5 w-full bg-foreground origin-left"
         initial={false}
         animate={{ scaleX: isActive ? 1 : 0 }}
         whileHover={{ scaleX: 1 }}

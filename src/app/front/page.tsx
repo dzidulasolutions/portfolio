@@ -18,8 +18,7 @@ export default async function FrontPage() {
   const technos = await getTechnos("front");
   const competences = await getCompetences("front");
   const about = await getAbout("front");
-  const masteredCount =
-    competences.filter((c) => c.status === "mastered").length + technos.length;
+  const masteredCount = competences.filter((c) => c.status === "mastered").length + technos.length;
 
   const stats: HeroStat[] = [
     { value: `${projects.length}+`, label: "Projets" },

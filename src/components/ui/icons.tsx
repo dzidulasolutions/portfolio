@@ -63,9 +63,26 @@ export const IconlyTwitter = ({ size = 24, color = "#000000" }: IconlyIconProps)
     <FaXTwitter size={size} color={color} />
 );
 
-export const IconlyEmail = ({ size = 24, color = "#000000" }: IconlyIconProps) => (
-    <MdEmail size={size} color={color} />
-)
+  
+  export const IconlyEmail = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+      return (
+		<svg width={size} height={size} viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M18.2039 8.85107L12.4399 13.5351L6.67493 8.85107" stroke={color} strokeWidth="1.5" strokeLinecap="square"></path>
+		<path d="M2.40002 3V21H22.4V3H2.40002Z" stroke={color} strokeWidth="1.5" strokeLinecap="square"></path>
+		</svg>
+      ) 
+  }
+
+export const IconlyWork = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+    return (
+        <svg width={size} height={size} viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.2501 17.2265V14.6895" stroke={color} strokeWidth="1.5" strokeLinecap="square"></path>
+            <path fillRule="evenodd" clipRule="evenodd" d="M21.495 5.87988V12.3799C19.035 13.8199 15.785 14.6899 12.245 14.6899C8.705 14.6899 5.465 13.8199 3.005 12.3799V5.87988H21.495Z" stroke={color} strokeWidth="1.5" strokeLinecap="square"></path>
+            <path d="M15.7501 5.61115L14.7502 3.2998H9.75022L8.75012 5.61115" stroke={color} strokeWidth="1.5" strokeLinecap="square"></path>
+            <path d="M3.02942 15.1932L3.21842 20.7002H21.2814L21.4704 15.1932" stroke={color} strokeWidth="1.5" strokeLinecap="square"></path>
+        </svg>
+    )
+}
 
 export const IconlyCheck = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
     return (
@@ -85,12 +102,17 @@ export const IconlyExternalLink = ({ size = 24, color = "#000000" }: IconlyIconP
 
 export const IconlyPin = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
     return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 22s7-7.16 7-12A7 7 0 0 0 5 10c0 4.84 7 12 7 12z" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            <circle cx="12" cy="10" r="2.5" stroke={color} strokeWidth="1.5" />
+        <svg width={size} height={size} viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <title>Iconly/Light/Location</title>
+            <g id="Iconly/Light/Location" stroke="none" strokeWidth="1.5" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
+                <g id="Location" transform="translate(4.500000, 3.000000)" stroke={color} strokeWidth="1.5">
+                    <path d="M10,7.50050782 C10,6.11923624 8.88076376,5 7.50050782,5 C6.11923624,5 5,6.11923624 5,7.50050782 C5,8.88076376 6.11923624,10 7.50050782,10 C8.88076376,10 10,8.88076376 10,7.50050782 Z" id="Stroke-1"></path>
+                    <path d="M7.49951162,18 C6.30103536,18 0,12.8983747 0,7.5632901 C0,3.38663602 3.357101,0 7.49951162,0 C11.6419223,0 15,3.38663602 15,7.5632901 C15,12.8983747 8.69798789,18 7.49951162,18 Z" id="Stroke-3"></path>
+                </g>
+            </g>
         </svg>
-    );
-};
+    )
+}
 
 export const IconlyBriefcase = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
     return (
@@ -447,7 +469,7 @@ export const IconlyMultiTenant = ({ size = 24, color = "#000000" }: IconlyIconPr
         </svg>
     )
 }
- 
+
 export const IconlyCiCd = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 16 16">
@@ -465,8 +487,8 @@ export const IconlyContainerization = ({ size = 24, color = "#000000" }: IconlyI
             <path fill={color} d="M21.93 7.66c-.02-.05-.04-.11-.07-.16a1 1 0 0 0-.06-.08c-.03-.04-.06-.09-.1-.12c-.03-.03-.06-.04-.09-.07c-.04-.03-.07-.06-.11-.09h-.01l-9-5.01a.99.99 0 0 0-.97 0l-9.01 5H2.5c-.04.02-.07.06-.11.09a.6.6 0 0 0-.09.07c-.04.04-.07.08-.1.12c-.02.03-.05.05-.06.08c-.03.05-.05.1-.07.16c-.01.03-.03.05-.03.08c-.02.08-.04.17-.04.26v8c0 .36.2.7.51.87l9 5l.15.06c.03.01.06.03.09.03a1.1 1.1 0 0 0 .5 0c.03 0 .06-.02.09-.03c.05-.02.1-.03.15-.06l9-5c.32-.18.51-.51.51-.87v-8c0-.09-.01-.18-.04-.26c0-.03-.02-.05-.03-.08ZM12 4.15l6.94 3.86l-2.44 1.36l-6.94-3.86zm-4.5 2.5l6.94 3.86L12 11.87L5.06 8.01zM4 9.71l7 3.89v5.71l-7-3.89zm16 5.71l-7 3.89V13.6l2.5-1.39v3.21l2-1.11V11.1L20 9.71z" />
         </svg>
     )
- }
- 
+}
+
 export const IconlyDataProtection = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 48 48">

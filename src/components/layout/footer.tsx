@@ -1,8 +1,8 @@
 // src/components/layout/footer.tsx
 import type { SocialPlatform, TechStack } from "@/content/types";
 import {
-  IconlyGithub, IconlyLinkedin, IconlyTwitter, IconlyEmail,
-  IconlyExternalLink, IconlyPin, IconlyBriefcase,
+  IconlyGithub, IconlyLinkedin, IconlyTwitter, IconlyEmail, IconlyWork,
+  IconlyExternalLink, IconlyPin
 } from "@/components/ui/icons";
 import { NAV_ITEMS } from "@/lib/navigation";
 import identity from "@/content/data/identity.json";
@@ -24,7 +24,7 @@ const SOCIAL_ICONS: Record<SocialPlatform, React.ComponentType<{ size?: number; 
 export function Footer({ technos = [] }: FooterProps) {
   return (
     <footer className="border-t border-neutral-200 dark:border-neutral-800 mt-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="sm:py-28 max-w-8xl mx-auto px-4 sm:px-6 lg:px-15 grid grid-cols-1 md:grid-cols-4 gap-8">
 
         {/* Colonne marque */}
         <div className="flex flex-col gap-4 md:col-span-1">
@@ -48,7 +48,7 @@ export function Footer({ technos = [] }: FooterProps) {
                     target={social.platform === "email" ? undefined : "_blank"}
                     rel="noopener noreferrer"
                     aria-label={social.platform}
-                    className="w-9 h-9 flex items-center justify-center border border-neutral-300/30 dark:border-neutral-700/30 text-neutral-600 dark:text-neutral-400 hover:border-accent-500 hover:text-accent-500 transition-colors"
+                    className="w-9 h-9 flex items-center justify-center border border-neutral-300/30 dark:border-neutral-700/30 text-neutral-600 dark:text-neutral-400 hover:border-neutral-500 hover:text-neutral-500 transition-colors"
                   >
                     <Icon size={16} color="currentColor" />
                   </a>
@@ -59,14 +59,12 @@ export function Footer({ technos = [] }: FooterProps) {
 
         {/* Colonne Navigation */}
         <div className="flex flex-col gap-3">
-          <h3 className="font-ui text-xs font-bold text-accent-600 dark:text-accent-400 uppercase tracking-wide">
-            Navigation
-          </h3>
+          <h3 className="font-ui text-sm font-bold text-foreground uppercase tracking-wide"> Navigation</h3>
           {NAV_ITEMS.map((item) => (
             
              <a key={item.href}
               href={item.href}
-              className="font-ui text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+              className="font-ui text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors"
             >
               {item.label}
             </a>
@@ -75,9 +73,7 @@ export function Footer({ technos = [] }: FooterProps) {
 
         {/* Colonne Technologies */}
         <div className="flex flex-col gap-3">
-          <h3 className="font-ui text-xs font-bold text-accent-600 dark:text-accent-400 uppercase tracking-wide">
-            Technologies
-          </h3>
+          <h3 className="font-ui text-sm font-bold text-foreground uppercase tracking-wide">Technologies</h3>
           {technos.slice(0, 5).map((tech) => (
             <span key={tech.name} className="font-ui text-sm text-neutral-600 dark:text-neutral-400">
               {tech.name}
@@ -87,29 +83,27 @@ export function Footer({ technos = [] }: FooterProps) {
 
         {/* Colonne Contact */}
         <div className="flex flex-col gap-3">
-          <h3 className="font-ui text-xs font-bold text-accent-600 dark:text-accent-400 uppercase tracking-wide">
-            Contact
-          </h3>
-          <div className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
-            <IconlyPin size={16} color="#0080C8" />
-            {identity.location.city}, {identity.location.country}
+          <h3 className="font-ui text-sm font-bold text-foreground uppercase tracking-wide">Contact</h3>
+          <div className="flex items-center justify-start gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+            <span><IconlyPin size={16} color="currentColor" /></span>
+            <span>{identity.location.city}, {identity.location.country}</span>
           </div>
+
           {identity.socials
             .filter((s) => s.platform === "email")
             .map((social) => (
               
-               <a key={social.url}
-                href={social.url}
-                className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
-              >
-                <IconlyEmail size={16} color="#0080C8" />
+              <a key={social.url} href={social.url} className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors">
+                 <span><IconlyEmail size={16} color="currentColor" /></span>
                 {social.url.replace("mailto:", "")}
               </a>
             ))}
+
           <div className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
-            <IconlyBriefcase size={16} color="#0080C8" />
+            <span><IconlyWork size={16} color="currentColor" /></span>
             {identity.availability.workMode.join(" · ")}
           </div>
+
         </div>
       </div>
 
@@ -121,12 +115,13 @@ export function Footer({ technos = [] }: FooterProps) {
           </p>
           <p>
             Construit avec{" "}
-            <span className="text-accent-600 dark:text-accent-400 font-medium">Next.js</span>{" "}
+            <span className="text-neutral-600 dark:text-neutral-400 font-medium">Next.js</span>{" "}
             &{" "}
-            <span className="text-accent-600 dark:text-accent-400 font-medium">Tailwind CSS</span>
+            <span className="text-neutral-600 dark:text-neutral-400 font-medium">Tailwind CSS</span>
           </p>
         </div>
       </div>
+
     </footer>
   );
 }

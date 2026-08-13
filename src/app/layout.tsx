@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/layout/theme-provider";
-import { righteous, googleSans, roboto } from "@/lib/fonts";
+import { righteous, googleSans, roboto, malison } from "@/lib/fonts";
+import "@flaticon/flaticon-uicons/css/all/all.css";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -16,7 +17,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${righteous.variable} ${googleSans.variable} ${roboto.variable}  h-full antialiased`}
+			className={`${righteous.variable} ${googleSans.variable} ${roboto.variable} ${malison.variable}  h-full antialiased`}
 			suppressHydrationWarning
 		>
 			<body className="min-h-full flex flex-col">
