@@ -5,15 +5,16 @@
   },
   "paragraph2": "Je m'intéresse particulièrement aux architectures robustes : traitement asynchrone, synchronisation hors-ligne, sécurité des transactions — des problématiques que j'ai directement affrontées sur des projets comme Izina, Autogo et Kadi.",
   "facts": [
-    { "icon": "", "text": "Lomé, Togo" },
-    { "icon": "", "text": "1 an d'expérience en développement web" },
-    { "icon": "", "text": "Certifié Simplon Côte d'Ivoire" },
-    { "icon": "", "text": "Architectures offline-first & asynchrones" },
-    { "icon": "", "text": "Français" }
+    { "icon": "IconlyPin", "text": "Lomé, Togo" },
+    { "icon": "IconlyBriefcase", "text": "1 an d'expérience en développement web" },
+    { "icon": "IconlyGraduation", "text": "Certifié Simplon Côte d'Ivoire" },
+    { "icon": "IconlyStar", "text": "Clean Architecture & Feature Architecture" },
+    { "icon": "IconlyLanguage", "text": "Applications bilingues FR/EN" }
   ],
   "domainCards": {
     "front": [
       {
+        "icon":"IconlyWebFront",
         "title": "Développement Front-End",
         "subtitle": "React • Next.js • TypeScript",
         "description": "Applications web modernes avec React, Next.js (App Router) et TypeScript. Interfaces responsives, accessibles, et pensées mobile-first.",
@@ -22,6 +23,7 @@
     ],
     "back": [
       {
+        "icon":"IconlyWebBack",
         "title": "Développement Back-End",
         "subtitle": "Node.js • NestJS • MongoDB",
         "description": "API robustes avec NestJS, traitement asynchrone via queues, authentification sécurisée. Architecture pensée pour des cas d'usage réels : paiement, données hors-ligne, multi-tenant.",
@@ -30,12 +32,14 @@
     ],
     "fullstack": [
       {
+        "icon":"IconlyWebFront",
         "title": "Développement Front-End",
         "subtitle": "React • Next.js • TypeScript",
         "description": "Applications web modernes avec React, Next.js (App Router) et TypeScript. Interfaces responsives, accessibles, et pensées mobile-first.",
         "tags": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
       },
       {
+        "icon":"IconlyWebBack",
         "title": "Développement Back-End",
         "subtitle": "Node.js • NestJS • MongoDB",
         "description": "API robustes avec NestJS, traitement asynchrone via queues, authentification sécurisée. Architecture pensée pour des cas d'usage réels : paiement, données hors-ligne, multi-tenant.",

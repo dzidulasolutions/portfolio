@@ -138,6 +138,7 @@ export interface AboutFact {
 }
 
 export interface DomainCard {
+  icon: string;
   title: string;
   subtitle: string;
   description: string;

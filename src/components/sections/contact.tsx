@@ -29,10 +29,10 @@ const SOCIAL_LABEL: Record<SocialPlatform, string> = {
 export function Contact({ profile }: ContactProps) {
   return (
     <section id="contact" className="py-12 sm:py-28 max-w-8xl mx-auto px-4 sm:px-6 lg:px-15">
-      <div className="px-6 py-16 sm:px-16 flex flex-col items-center text-center gap-6 border border-foreground/10 bg-foreground/5">
+      <div className="px-6 py-16 sm:px-16 flex flex-col items-center text-center gap-6 border border-neutral-300/30 dark:border-neutral-700/30  bg-foreground/5">
         <p className="font-ui text-accent-600 dark:text-accent-400 text-sm uppercase tracking-wide">Contact</p>
         <h2 className="font-malison text-foreground text-3xl sm:text-4xl font-bold max-w-xl">Prêt à collaborer ?</h2>
-        <p className="font-ui text-neutral-600 dark:text-neutral-400 max-w-lg">
+        <p className="font-ui text-(--color-muted) max-w-lg">
           Que vous ayez un projet web ou mobile, je suis disponible pour en discuter et vous accompagner de l&apos;idée au déploiement.
         </p>
 
@@ -61,12 +61,9 @@ export function Contact({ profile }: ContactProps) {
                   w-[calc(50%-0.375rem)] md:w-auto
                   inline-flex items-center justify-center gap-2
                   px-4 py-2
-                  border border-foreground/30
                   bg-foreground/5
                   text-foreground
-                  hover:bg-foreground
-                  hover:text-background
-                  hover:border-foreground
+                  border border-neutral-300/30 dark:border-neutral-700/30  hover:border-neutral-500
                   transition-colors duration-200"
                 >
                   <Icon size={18} color="currentColor" />
