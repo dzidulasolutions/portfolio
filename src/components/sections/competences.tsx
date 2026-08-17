@@ -44,10 +44,10 @@ export const TECH_ICONS: Record<string, React.ComponentType<{ size?: number; col
 function CompetenceCard({ concept }: { concept: Competence }) {
   const Icon = TECH_ICONS[concept.icon];
   return (
-    <div className="card flex flex-col gap-4 p-5 border border-gray-600/20 bg-neutral-700/10 dark:border-neutral-800"
+    <div className="card flex flex-col gap-4 p-5 border rounded-xs border-gray-600/20 bg-neutral-700/10 dark:border-neutral-800"
       style={{ "--hover-color": concept.borderColor, } as React.CSSProperties}>
-      <div style={{ backgroundColor: concept.bgColor }} className="w-11 h-11 flex items-center bg-neutral-700/10 justify-center text-xl">
-        {Icon ? <Icon size={22} color={concept.borderColor} /> : concept.icon || "?"}
+      <div className="w-11 h-11 flex items-center justify-center text-xl">
+        {Icon ? <Icon size={22} color="currentColor" /> : concept.icon || "?"}
       </div>
 
       <div className="flex flex-col gap-0.5">
@@ -57,8 +57,8 @@ function CompetenceCard({ concept }: { concept: Competence }) {
 
       <div className="w-full h-1 bg-neutral-700/30 dark:bg-neutral-800 overflow-hidden">
         <div
-          className="h-full transition-all"
-          style={{ width: `${concept.level}%`, backgroundColor: concept.borderColor }}
+          className="h-full transition-all bg-foreground"
+          style={{ width: `${concept.level}%`}}
         />
       </div>
     </div>
@@ -67,9 +67,9 @@ function CompetenceCard({ concept }: { concept: Competence }) {
 
 export function Competences({ concepts }: CompetencesProps) {
   return (
-    <section id="competences" className="pb-20 pt-8 sm:pb-28 sm:pt-8 max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 bg-neutral-700/10">
+    <section id="competences" className="pb-20 pt-16 sm:pb-28  max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 ">
       <div className="flex flex-col gap-2 mb-4">
-        <p className="font-ui text-accent-600 dark:text-accent-400 text-xs uppercase tracking-wide">
+        <p className="font-ui text-(--color-muted) text-xs uppercase tracking-wide">
           Notions transversales
         </p>
       </div>

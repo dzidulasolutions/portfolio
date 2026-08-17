@@ -52,12 +52,12 @@ function TechCard({ tech }: { tech: TechStack }) {
   const Icon = TECH_ICONS[tech.icon];
 
   return (
-    <div className="card flex flex-col gap-2 p-5 border border-gray-600/20 bg-neutral-700/10 dark:border-neutral-800"
+    <div className="card flex flex-col gap-4 p-5 border rounded-xs border-gray-600/20 bg-neutral-700/10 dark:border-neutral-800"
       style={{ "--hover-color": tech.borderColor, } as React.CSSProperties}
     >
       {/* Case icône */}
-      <div style={{backgroundColor: tech.bgColor}} className="w-11 h-11 flex items-center justify-center text-xl">
-        {Icon ? <Icon size={22} color={tech.borderColor} /> : "?"}
+      <div  className="w-11 h-11 flex items-center justify-center text-xl">
+        {Icon ? <Icon size={22} color="currentColor" /> : "?"}
       </div>
 
       {/* Nom + description */}
@@ -68,8 +68,8 @@ function TechCard({ tech }: { tech: TechStack }) {
 
       {/* Barre de progression */}
       <div className="w-full h-1 bg-neutral-700/30 dark:bg-neutral-800 overflow-hidden">
-        <div className="h-full transition-all"
-          style={{ width: `${tech.level}%`, backgroundColor: tech.borderColor }}
+        <div className="h-full transition-all bg-foreground"
+          style={{ width: `${tech.level}%` }}
         />
       </div>
     </div>
@@ -78,9 +78,9 @@ function TechCard({ tech }: { tech: TechStack }) {
 
 export function Technos({ stacks }: TechnosProps) {
   return (
-    <section id="technos" className="pt-20 sm:pt-28 max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 bg-neutral-700/10">
+    <section id="technos" className="pt-20 sm:pt-28 max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 ">
       <div className="flex flex-col gap-2 mb-4">
-        <p className="font-ui text-accent-600 dark:text-accent-400 text-xs uppercase tracking-wide">
+        <p className="font-ui text-(--color-muted) text-xs uppercase tracking-wide">
           Stack technologique
         </p>
       </div>
