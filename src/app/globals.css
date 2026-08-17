@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @theme {
   /* =========================
      Couleurs monochromes
@@ -20,12 +21,23 @@
   --color-neutral-800: #262626;
   --color-neutral-900: #111111;
 
+
   /* =========================
      Couleurs du thème
      ========================= */
 
   --color-background: var(--color-bg);
   --color-foreground: var(--color-text);
+
+
+  /* =========================
+     Couleurs des boutons
+     ========================= */
+
+  --color-button-bg: var(--color-text);
+  --color-button-text: var(--color-bg);
+
+
 
   /* =========================
      Polices
@@ -36,6 +48,7 @@
   --font-body: var(--font-roboto), sans-serif;
   --font-malison: var(--font-malison), sans-serif;
 }
+
 
 
 /* =========================
@@ -49,7 +62,19 @@
   --color-muted: #737373;
   --color-border: #E5E5E5;
   --color-surface: #F5F5F5;
+
+
+  /* =========================
+     Buttons
+     ========================= */
+
+  --color-button-bg: #111111;
+  --color-button-text: #FFFCFB;
+      /* Warning */
+  --color-warning-bg: #E5E5E5;
+  --color-warning-text: #111111;
 }
+
 
 
 /* =========================
@@ -63,7 +88,19 @@
   --color-muted: #A3A3A3;
   --color-border: #2A2A2A;
   --color-surface: #181818;
+
+    /* Warning */
+  --color-warning-bg: #262626;
+  --color-warning-text: #FFFCFB;
+
+  /* =========================
+     Buttons
+     ========================= */
+
+  --color-button-bg: #FFFCFB;
+  --color-button-text: #111111;
 }
+
 
 
 /* =========================
@@ -74,11 +111,36 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
 }
+
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn {
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.btn:hover {
+  background-color: var(--color-button-text);
+  color: var(--color-button-bg);
+}
+
 
 
 /* =========================
@@ -90,6 +152,7 @@ body {
   width: 100%;
   position: relative;
 }
+
 
 .grid-background {
   position: absolute;
@@ -123,6 +186,7 @@ body {
   );
 }
 
+
 .dark .grid-background {
   background-image:
     linear-gradient(
@@ -138,6 +202,7 @@ body {
 }
 
 
+
 /* =========================
    CARDS
    ========================= */
@@ -149,9 +214,11 @@ body {
     transform 0.3s ease;
 }
 
+
 .card:hover {
   border-color: var(--color-text);
 }
+
 
 
 /* =========================
@@ -161,4 +228,15 @@ body {
 ::selection {
   background-color: var(--color-text);
   color: var(--color-bg);
+}
+
+    /* Warning */
+.warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning-text);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
