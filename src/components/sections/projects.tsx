@@ -144,7 +144,7 @@ export function Projects({ projects }: ProjectsProps) {
 
       <div className="flex flex-col gap-2 mb-16">
         <h2 className="font-ui text-(--color-muted) text-xs uppercase tracking-wide">Projets</h2>
-        <div className="font-malison text-accent-600 dark:text-accent-400 text-[2.5rem] tracking-wide">
+        <div className="font-malison text-foreground text-[2.5rem] tracking-wide">
           Réalisations
           <span> </span>
           <span className="text-foreground"> récentes</span>
@@ -159,7 +159,7 @@ export function Projects({ projects }: ProjectsProps) {
               <div key={project.id} className="relative flex md:justify-between items-start">
                 
                   <>
-                    <div className="w-full">
+                    <div className="w-full ">
                       <ProjectCard project={project} index={index} />
                     </div>
                   </>
