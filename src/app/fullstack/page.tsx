@@ -11,6 +11,7 @@ import { Contact } from "@/components/sections/contact";
 import identity from "@/content/data/identity.json";
 import { About } from "@/components/sections/about";
 import { getAbout } from "@/lib/api/about";
+import Me from "@/components/sections/me";
 
 export default async function FullstackPage() {
   const profile = await getProfile("fullstack");
@@ -41,6 +42,7 @@ export default async function FullstackPage() {
         facts={about.facts}
         domainCards={about.domainCards}
       />
+      <Me/>
       <Contact profile={profile} />
     </PageShell>
   );
