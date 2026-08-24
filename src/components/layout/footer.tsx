@@ -29,9 +29,9 @@ export function Footer({ technos = [] }: FooterProps) {
         {/* Colonne marque */}
         <div className="flex flex-col gap-4 md:col-span-1 pb-12">
           <p className="font-ui text-xl font-bold text-foreground">
-          <span className="font-title font-bold text-lg text-foreground flex items-center gap-1">
-            <i className="fi fi-sr-incognito text-gradient"></i>
-          </span>
+            <span className="font-title font-bold text-lg text-foreground flex items-center gap-1">
+              <i className="fi fi-sr-incognito text-gradient"></i>
+            </span>
           </p>
           <p className="font-ui text-sm text-(--color-muted) max-w-xs">
             Développeur Web passionné, basé à {identity.location.city}, {identity.location.country}.
@@ -42,13 +42,16 @@ export function Footer({ technos = [] }: FooterProps) {
               .map((social) => {
                 const Icon = SOCIAL_ICONS[social.platform as SocialPlatform];
                 return (
-                  
-                   <a key={social.url}
+
+                  <a key={social.url}
                     href={social.url}
                     target={social.platform === "email" ? undefined : "_blank"}
                     rel="noopener noreferrer"
                     aria-label={social.platform}
-                    className="w-9 h-9 flex items-center justify-center border border-neutral-300/30 dark:border-neutral-700/30  hover:border-neutral-500 hover:text-neutral-500 transition-colors text-(--color-muted)"
+                    className="w-9 h-9 flex items-center justify-center border border-(--color-border)
+          text-(--color-muted)
+          hover:border-foreground
+          hover:text-foreground transition-colors"
                   >
                     <Icon size={16} color="currentColor" />
                   </a>
@@ -61,8 +64,8 @@ export function Footer({ technos = [] }: FooterProps) {
         <div className="flex flex-col gap-3">
           <h3 className="font-ui text-sm font-bold text-foreground uppercase tracking-wide"> Navigation</h3>
           {NAV_ITEMS.map((item) => (
-            
-             <a key={item.href}
+
+            <a key={item.href}
               href={item.href}
               className="font-ui text-sm text-(--color-muted) hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors"
             >
@@ -92,9 +95,9 @@ export function Footer({ technos = [] }: FooterProps) {
           {identity.socials
             .filter((s) => s.platform === "email")
             .map((social) => (
-              
+
               <a key={social.url} href={social.url} className="flex items-center gap-2 text-sm text-(--color-muted) hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors">
-                 <span><IconlyEmail size={16} color="currentColor" /></span>
+                <span><IconlyEmail size={16} color="currentColor" /></span>
                 {social.url.replace("mailto:", "")}
               </a>
             ))}

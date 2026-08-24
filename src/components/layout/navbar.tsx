@@ -57,12 +57,15 @@ export function Navbar() {
 
           {/* Bouton hamburger mobile */}
           <button
-            className="md:hidden flex items-center justify-center w-9 h-9"
+            className="md:hidden  w-9 h-9 flex items-center justify-center  border border-(--color-border)
+          text-foreground
+          hover:border-foreground/20
+          hover:text-foreground rounded-xs transition-colors"
             onClick={() => setIsMenuOpen((open) => !open)}
             aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={isMenuOpen}
           >
-            {isMenuOpen ? <IconlyClose /> : <IconlyMenu />}
+            {isMenuOpen ? <IconlyClose color="currentColor"/> : <IconlyMenu color="currentColor" />}
           </button>
         </div>
 
@@ -78,7 +81,7 @@ export function Navbar() {
               />
             ))}
             <div className="pt-2">
-              <ThemeToggle />
+              <ThemeToggle  />
             </div>
           </nav>
         )}

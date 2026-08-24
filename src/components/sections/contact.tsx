@@ -29,18 +29,20 @@ const SOCIAL_LABEL: Record<SocialPlatform, string> = {
 export function Contact({ profile }: ContactProps) {
   return (
     <section id="contact" className="py-12 sm:py-28 max-w-8xl mx-auto px-4 sm:px-6 lg:px-15">
-      <div className="px-6 py-16 sm:px-16 flex flex-col items-center text-center gap-6 border border-neutral-300/30 dark:border-neutral-700/30  bg-foreground/5">
+      <div className="px-6 py-16 sm:px-16 flex flex-col items-center text-center gap-6 border border-(--color-border)
+    bg-(--color-surface)
+    transition-colors duration-200">
         <p className="font-ui text-accent-600 dark:text-accent-400 text-sm uppercase tracking-wide">Contact</p>
         <h2 className="font-malison text-foreground text-3xl sm:text-4xl font-bold max-w-xl">Prêt à collaborer ?</h2>
         <p className="font-ui text-(--color-muted) max-w-lg">
           Que vous ayez un projet web ou mobile, je suis disponible pour en discuter et vous accompagner de l&apos;idée au déploiement.
         </p>
 
-        <div className="flex items-center uppercase justify-center w-full md:w-auto gap-2.5 py-2 px-4 border border-foreground/30 bg-foreground/10">
-          <span className="h-2 w-2 rounded-full bg-foreground shrink-0" />
-          <span className="font-ui text-sm font-medium text-foreground">{identity.availability.status}</span>
-          <span className="w-px h-4 bg-foreground" />
-          <span className="font-ui text-sm font-medium text-foreground">{identity.availability.opportunities.join(" · ")}</span>
+        <div className="flex items-center uppercase justify-center w-full md:w-auto gap-2.5 py-2 px-4 text-green-500 border bg-green-500/10 border-green-500/20">
+          <span className="h-2 w-2 rounded-full bg-green-500  shrink-0" />
+          <span className="font-ui text-sm font-medium">{identity.availability.status}</span>
+          <span className="w-px h-4 bg-green-500" />
+          <span className="font-ui text-sm font-medium">{identity.availability.opportunities.join(" · ")}</span>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
@@ -61,9 +63,10 @@ export function Contact({ profile }: ContactProps) {
                   w-[calc(50%-0.375rem)] md:w-auto
                   inline-flex items-center justify-center gap-2
                   px-4 py-2
-                  bg-foreground/5
-                  text-foreground
-                  border border-neutral-300/30 dark:border-neutral-700/30  hover:border-neutral-500
+                  border border-(--color-border)
+          text-(--color-muted)
+          hover:border-foreground/50
+          hover:text-foreground 
                   transition-colors duration-200"
                 >
                   <Icon size={18} color="currentColor" />
@@ -73,7 +76,7 @@ export function Contact({ profile }: ContactProps) {
             })}
         </div>
 
-        <a href={profile.cvUrl} download className="font-ui font-medium uppercase inline-flex items-center gap-2 px-6 py-2 mt-6 bg-foreground text-background hover:bg-neutral-800 dark:hover:bg-neutral-300 transition-colors">
+        <a href={profile.cvUrl} download className="font-ui font-medium uppercase inline-flex items-center gap-2 px-6 py-2 mt-6 btn">
           Télécharger mon CV
           <Iconlydownload size={18} color="currentColor" />
         </a>

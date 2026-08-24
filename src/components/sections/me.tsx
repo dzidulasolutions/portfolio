@@ -38,7 +38,7 @@ const qualities = [
             icon: FiUsers,
             title: "Esprit d'équipe",
             description: "Construire ensemble",
-            style: "ml-16 lg:ml-16",
+            style: "ml-16 lg:ml-26",
       },
 ]
 

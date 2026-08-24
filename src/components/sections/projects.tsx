@@ -30,7 +30,7 @@ function ProjectCard({ project, index }: { project: Project, index: number }) {
         </span>
 
         <div className="w-full flex justify-between items-center">
-          
+
           <div className={`flex w-fit self-start justify-start items-center gap-2 px-3 py-1 rounded-xs border ${STATUS_LABEL[project.status] === "Terminé" ? "bg-green-500/10 border-green-500/20" : "bg-yellow-500/10 border-yellow-500/20"}`}>
             <span className={`h-2 w-2 rounded-full shrink-0 ${STATUS_LABEL[project.status] === "Terminé" ? "bg-green-500" : "bg-yellow-500"}`} />
 
@@ -62,70 +62,126 @@ function ProjectCard({ project, index }: { project: Project, index: number }) {
         </div>
 
         <div className="relative w-full h-40 bg-white overflow-hidden">
-          <Image src={project.media.thumbnail.url} alt={project.media.thumbnail.altText} fill className="object-cover"/>
+          <Image src={project.media.thumbnail.url} alt={project.media.thumbnail.altText} fill className="object-cover" />
         </div>
 
         <h3 className="font-ui text-xl font-bold text-foreground">{project.name}</h3>
         <p className="font-ui text-sm text-(--color-muted)">{project.description}</p>
 
         <div className="flex flex-col gap-2">
-          <p className="font-ui text-foreground text-xs uppercase tracking-wide">Stack technologique</p>
+          <p className="font-ui text-foreground text-xs uppercase tracking-wide">
+            Stack technologique
+          </p>
+
           <div className="flex flex-wrap gap-2">
             {project.stack.map((tech, index) => {
-              const isHiddenOnMobile = index >= 3;
+              const mobileVisible = index < 3;
+              const desktopVisible = index < 6;
 
               return (
-                <li key={tech} className={` border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground rounded-xs transition-colors py-1 px-3 items-center gap-2 font-ui text-xs  ${isHiddenOnMobile ? "hidden md:flex" : "flex"} ${isHiddenOnMobile && showAllStack ? "flex!" : ""}`}>
+                <li
+                  key={tech}
+                  className={
+                    showAllStack
+                      ? "flex border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground rounded-xs transition-colors py-1 px-3 items-center gap-2 font-ui text-xs"
+                      : mobileVisible
+                        ? "flex border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground rounded-xs transition-colors py-1 px-3 items-center gap-2 font-ui text-xs"
+                        : desktopVisible
+                          ? "hidden md:flex border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground rounded-xs transition-colors py-1 px-3 items-center gap-2 font-ui text-xs"
+                          : "hidden"
+                  }
+                >
                   <IconlyCheck size={16} color="#0080C8" />
                   {tech}
                 </li>
               );
             })}
 
+            {/* Mobile */}
             {project.stack.length > 3 && (
-              <button type="button" onClick={() => setShowAllStack((prev) => !prev)}
-                className="md:hidden border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground rounded-xs transition-colors py-1 px-3 font-ui text-xs  cursor-pointer" aria-expanded={showAllStack}>
-                {showAllStack
-                  ? "−"
-                  : `+${project.stack.length - 3}`}
+              <button
+                type="button"
+                onClick={() => setShowAllStack((prev) => !prev)}
+                className="md:hidden border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground rounded-xs transition-colors py-1 px-3 font-ui text-xs cursor-pointer"
+                aria-expanded={showAllStack}
+              >
+                {showAllStack ? "−" : `+${project.stack.length - 3}`}
+              </button>
+            )}
+
+            {/* Desktop */}
+            {project.stack.length > 6 && (
+              <button
+                type="button"
+                onClick={() => setShowAllStack((prev) => !prev)}
+                className="hidden md:block border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground rounded-xs transition-colors py-1 px-3 font-ui text-xs cursor-pointer"
+                aria-expanded={showAllStack}
+              >
+                {showAllStack ? "−" : `+${project.stack.length - 6}`}
               </button>
             )}
           </div>
         </div>
 
         <div className="flex flex-col gap-2 mt-4">
-          <p className="font-ui text-foreground text-xs uppercase tracking-wide">Features</p>
-          <p className="font-ui text-sm text-(--color-muted)">{project.highlight}</p>
+          <p className="font-ui text-foreground text-xs uppercase tracking-wide">
+            Features
+          </p>
+
+          <p className="font-ui text-sm text-(--color-muted)">
+            {project.highlight}
+          </p>
+
           <div className="flex flex-wrap gap-2 mt-1">
             {project.tags.map((tag, index) => {
-              const isHiddenOnMobile = index >= 3;
+              const mobileVisible = index < 3;
+              const desktopVisible = index < 6;
+
               return (
-                <span key={tag} className={` font-ui text-xs border border-(--color-border)
-          text-(--color-muted)
-          hover:border-foreground/50
-          hover:text-foreground transition-colors rounded-xs  py-1 px-3 ${isHiddenOnMobile ? "hidden md:block" : "block"} ${isHiddenOnMobile && showAllTags ? "block!" : ""}`}>
+                <span
+                  key={tag}
+                  className={
+                    showAllTags
+                      ? "block font-ui text-xs border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground transition-colors rounded-xs py-1 px-3"
+                      : mobileVisible
+                        ? "block font-ui text-xs border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground transition-colors rounded-xs py-1 px-3"
+                        : desktopVisible
+                          ? "hidden md:block font-ui text-xs border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground transition-colors rounded-xs py-1 px-3"
+                          : "hidden"
+                  }
+                >
                   {tag}
                 </span>
               );
             })}
 
+            {/* Mobile */}
             {project.tags.length > 3 && (
               <button
                 type="button"
                 onClick={() => setShowAllTags((prev) => !prev)}
-                className="md:hidden font-ui text-xs border border-(--color-border)
-          text-(--color-muted)
-          hover:border-foreground/50
-          hover:text-foreground transition-colors rounded-xs  py-1 px-3 cursor-pointer"
+                className="md:hidden font-ui text-xs border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground transition-colors rounded-xs py-1 px-3 cursor-pointer"
                 aria-expanded={showAllTags}
               >
-                {showAllTags
-                  ? "−"
-                  : `+${project.tags.length - 3}`}
+                {showAllTags ? "−" : `+${project.tags.length - 3}`}
+              </button>
+            )}
+
+            {/* Desktop */}
+            {project.tags.length > 6 && (
+              <button
+                type="button"
+                onClick={() => setShowAllTags((prev) => !prev)}
+                className="hidden md:block font-ui text-xs border border-(--color-border) text-(--color-muted) hover:border-foreground/50 hover:text-foreground transition-colors rounded-xs py-1 px-3 cursor-pointer"
+                aria-expanded={showAllTags}
+              >
+                {showAllTags ? "−" : `+${project.tags.length - 6}`}
               </button>
             )}
           </div>
         </div>
+
+
 
       </div>
     </>
@@ -154,12 +210,12 @@ export function Projects({ projects }: ProjectsProps) {
 
             return (
               <div key={project.id} className="relative flex md:justify-between items-start">
-                
-                  <>
-                    <div className="w-full ">
-                      <ProjectCard project={project} index={index} />
-                    </div>
-                  </>
+
+                <>
+                  <div className="w-full ">
+                    <ProjectCard project={project} index={index} />
+                  </div>
+                </>
 
               </div>
             );

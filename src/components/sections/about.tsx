@@ -44,9 +44,9 @@ function DomainCardItem({ card }: { card: DomainCard }) {
       className="
     border border-(--color-border)
     bg-(--color-surface)
+    transition-colors duration-200
     p-6
     flex flex-col gap-4
-    transition-colors duration-200
   "
     >
       <div className="flex items-start gap-3">
@@ -88,7 +88,7 @@ function DomainCardItem({ card }: { card: DomainCard }) {
           px-3 py-1
           border border-(--color-border)
           text-(--color-muted)
-          hover:border-foreground
+          hover:border-foreground/50
           hover:text-foreground
           transition-colors duration-200
         "
@@ -111,6 +111,7 @@ export function About({ profile, headline, paragraph2, facts, domainCards }: Abo
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-4">
         {/* Colonne gauche : texte */}
         <div className="flex flex-col gap-6">
+
           <h2 className="font-malison text-foreground text-3xl sm:text-4xl font-bold max-w-xl">
             <span>{headline.line1}</span>
             <br />

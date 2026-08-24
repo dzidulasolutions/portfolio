@@ -24,21 +24,14 @@ export function Hero({ profile, stats }: HeroProps) {
 
                     <div className="w-full flex justify-start items-center flex-wrap gap-3 mt-4 uppercase font-medium">
 
-                        <div className="warning flex justify-start items-center gap-2 h-11 w-auto px-4 rounded-xs">
-                            <span className="h-2 w-2 rounded-full shrink-0 bg-foreground" />
-
-                            <span className="font-ui text-sm font-medium">
-                                {identity.availability.status}
-                            </span>
-
-                            |
-
-                            <span className="font-ui text-sm font-medium">
-                                {identity.availability.opportunities.join(" · ")}
-                            </span>
+                        <div className="flex items-center uppercase justify-center w-full md:w-auto gap-2.5 py-2 px-4 text-green-500 bg-green-500/10 border border-green-500/20">
+                            <span className="h-2 w-2 rounded-full bg-green-500  shrink-0" />
+                            <span className="font-ui text-sm font-medium">{identity.availability.status}</span>
+                            <span className="w-px h-4 bg-green-500" />
+                            <span className="font-ui text-sm font-medium">{identity.availability.opportunities.join(" · ")}</span>
                         </div>
 
-                        <div className="warning flex justify-start items-center gap-2 h-11 w-auto px-4 rounded-xs">
+                        <div className="flex items-center uppercase justify-center w-full md:w-auto gap-2.5 py-2 px-4 rounded-xs text-foreground bg-foreground/10 border border-foreground/20">
                             <i className="fi fi-sr-marker text-xs" />
 
                             <span className="font-ui text-sm">
