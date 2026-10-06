@@ -166,7 +166,7 @@ export const IconlyCode = ({ size = 24, color = "#000000" }: IconlyIconProps) =>
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
-            <path fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 18l-6-6l6-6m8 0l6 6l-6 6" />
+            <path fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m8 18l-6-6l6-6m8 0l6 6l-6 6" />
         </svg>
 
     )
@@ -176,7 +176,7 @@ export const IconlyReact = ({ size = 24, color = "#000000" }: IconlyIconProps) =
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
-            <g fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <g fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                 <circle cx="12" cy="12" r="1" />
                 <path d="M12 17c-7 0-11-3-11-5s4-5 11-5s11 3 11 5s-4 5-11 5m4.33-2.5c-3.5 6.06-8.1 8.03-9.83 7.03S4.17 15.56 7.67 9.5s8.1-8.03 9.83-7.03s2.33 5.97-1.17 12.03m0-5c3.5 6.06 2.9 11.03 1.17 12.03s-6.33-.97-9.83-7.03S4.77 3.47 6.5 2.47s6.33.97 9.83 7.03" />
             </g>
@@ -190,7 +190,7 @@ export const IconlyNext = ({ size = 24, color = "#000000" }: IconlyIconProps) =>
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
-            <g fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <g fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                 <circle cx="12" cy="12" r="11" />
                 <path d="M1 12a1 1 0 0 1 22 0a1 1 0 0 1-22 0m14-1V8m3.6 12.8L9 8v8" />
             </g>
@@ -203,7 +203,7 @@ export const IconlyBalise = ({ size = 24, color = "#000000" }: IconlyIconProps) 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
-            <path fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a2 2 0 0 1 2 2q0 5 3 6q-3 1-3 6a2 2 0 0 1-2 2h-3M9 4H6a2 2 0 0 0-2 2q0 5-3 6q3 1 3 6a2 2 0 0 0 2 2h3" />
+            <path fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 4h3a2 2 0 0 1 2 2q0 5 3 6q-3 1-3 6a2 2 0 0 1-2 2h-3M9 4H6a2 2 0 0 0-2 2q0 5-3 6q3 1 3 6a2 2 0 0 0 2 2h3" />
         </svg>
     )
 }
@@ -212,7 +212,7 @@ export const IconlyCloud = ({ size = 24, color = "#000000" }: IconlyIconProps) =
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
-            <path fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20a8 8 0 1 1 7.746-10H18a1 1 0 0 1 0 10Z" />
+            <path fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20a8 8 0 1 1 7.746-10H18a1 1 0 0 1 0 10Z" />
         </svg>
 
     )
@@ -222,7 +222,7 @@ export const IconlyGit = ({ size = 24, color = "#000000" }: IconlyIconProps) => 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
-            <g fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <g fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                 <circle cx="18" cy="5" r="3" />
                 <circle cx="6" cy="12" r="3" />
                 <circle cx="18" cy="19" r="3" />
@@ -390,7 +390,7 @@ export const IconlyApi = ({ size = 24, color = "#000000" }: IconlyIconProps) => 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 48 48">
             <path d="M0 0h48v48H0z" fill="none" />
-            <path fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m37 22l-3 3l-11-11l3-3c1.5-1.5 7-4 11 0s1.5 9.5 0 11m5-16l-5 5M11 26l3-3l11 11l-3 3c-1.5 1.5-7 4-11 0s-1.5-9.5 0-11m12 6l4-4M6 42l5-5m5-12l4-4" />
+            <path fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="m37 22l-3 3l-11-11l3-3c1.5-1.5 7-4 11 0s1.5 9.5 0 11m5-16l-5 5M11 26l3-3l11 11l-3 3c-1.5 1.5-7 4-11 0s-1.5-9.5 0-11m12 6l4-4M6 42l5-5m5-12l4-4" />
         </svg>
     )
 }
@@ -399,11 +399,11 @@ export const IconlyRBAC = ({ size = 24, color = "#000000" }: IconlyIconProps) =>
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 48 48">
             <path d="M0 0h48v48H0z" fill="none" />
-            <g fill="none" stroke={color} stroke-linecap="round" stroke-width="4">
-                <path stroke-linejoin="round" d="M20 10H6a2 2 0 0 0-2 2v26a2 2 0 0 0 2 2h36a2 2 0 0 0 2-2v-2.5" />
+            <g fill="none" stroke={color} strokeLinecap="round" strokeWidth="4">
+                <path strokeLinejoin="round" d="M20 10H6a2 2 0 0 0-2 2v26a2 2 0 0 0 2 2h36a2 2 0 0 0 2-2v-2.5" />
                 <path d="M10 23h8m-8 8h24" />
-                <circle cx="34" cy="16" r="6" stroke-linejoin="round" />
-                <path stroke-linejoin="round" d="M44 28.419C42.047 24.602 38 22 34 22s-5.993 1.133-8.05 3" />
+                <circle cx="34" cy="16" r="6" strokeLinejoin="round" />
+                <path strokeLinejoin="round" d="M44 28.419C42.047 24.602 38 22 34 22s-5.993 1.133-8.05 3" />
             </g>
         </svg>
     )
@@ -434,8 +434,8 @@ export const IconlyInjection = ({ size = 24, color = "#000000" }: IconlyIconProp
             <path d="M0 0h48v48H0z" fill="none" />
             <g fill="none">
                 <path d="M38.168 22.262L19.077 41.354L6.349 28.626L25.44 9.534" clip-rule="evenodd" />
-                <path stroke={color} stroke-linejoin="round" stroke-width="4" d="M38.168 22.262L19.077 41.354L6.349 28.626L25.44 9.534" />
-                <path stroke={color} stroke-linecap="round" stroke-width="4" d="m21.905 5.999l19.8 19.799m-26.871 2.828l4.243 4.243M6.35 41.353l6.363-6.363m19.092-19.092l3.534-3.535" />
+                <path stroke={color} strokeLinejoin="round" strokeWidth="4" d="M38.168 22.262L19.077 41.354L6.349 28.626L25.44 9.534" />
+                <path stroke={color} strokeLinecap="round" strokeWidth="4" d="m21.905 5.999l19.8 19.799m-26.871 2.828l4.243 4.243M6.35 41.353l6.363-6.363m19.092-19.092l3.534-3.535" />
             </g>
         </svg>
     )
@@ -445,7 +445,7 @@ export const IconlyTransactions = ({ size = 24, color = "#000000" }: IconlyIconP
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
-            <path fill="none" stroke={color} stroke-width="2" d="M2 7h18m-4-5l5 5l-5 5m6 5H4m4-5l-5 5l5 5" />
+            <path fill="none" stroke={color} strokeWidth="2" d="M2 7h18m-4-5l5 5l-5 5m6 5H4m4-5l-5 5l5 5" />
         </svg>
 
     )
@@ -492,7 +492,7 @@ export const IconlyDataProtection = ({ size = 24, color = "#000000" }: IconlyIco
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 48 48">
             <path d="M0 0h48v48H0z" fill="none" />
-            <g fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+            <g fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="4">
                 <path d="M39 28v4h-8v-4a4 4 0 0 1 8 0m-13 4h18v12H26zm6-26h6a4 4 0 0 1 4 4v6M16 42h-6a4 4 0 0 1-4-4v-6M22 8v12c0 2.21-4.03 4-9 4s-9-1.79-9-4V8" />
                 <path d="M22 14c0 2.21-4.03 4-9 4s-9-1.79-9-4m18-6c0 2.21-4.03 4-9 4s-9-1.79-9-4s4.03-4 9-4s9 1.79 9 4" />
             </g>
@@ -546,12 +546,13 @@ export const IconlyLanguage = ({ size = 24, color = "#000000" }: IconlyIconProps
 	<path d="M0 0h24v24H0z" fill="none" />
 	<g fill="none">
 		<path d="M2 4h20v13H2z" />
-		<path stroke={color} stroke-linecap="square" stroke-width="2" d="M12 17v4m-4 0h8M2 4h20v13H2z" />
+		<path stroke={color} strokeLinecap="square" strokeWidth="2" d="M12 17v4m-4 0h8M2 4h20v13H2z" />
 	</g>
 </svg>
 
       ) 
   }
+
   export const IconlyWebBack = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
       return (
 <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24">
@@ -560,5 +561,14 @@ export const IconlyLanguage = ({ size = 24, color = "#000000" }: IconlyIconProps
 </svg>
 
 
+      ) 
+  }
+
+  
+  export const IconlyPlay = ({ size = 24, color = "#000000" }: IconlyIconProps) => {
+      return (
+		<svg width={size} height={size} viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path fillRule="evenodd" clipRule="evenodd" d="M10.253 15.983V9.215L15.582 12.599L10.253 15.983ZM12.25 2.854C6.874 2.854 2.5 7.228 2.5 12.604C2.5 17.98 6.874 22.354 12.25 22.354C17.626 22.354 22 17.98 22 12.604C22 7.228 17.626 2.854 12.25 2.854Z" fill={color}></path>
+		</svg>
       ) 
   }

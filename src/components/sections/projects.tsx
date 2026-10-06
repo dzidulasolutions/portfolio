@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import type { Project, ProjectStatus } from "@/content/types";
-import { IconlyCheck, IconlyGithub, IconlyExternalLink } from "@/components/ui/icons";
+import { IconlyCheck, IconlyGithub, IconlyExternalLink , IconlyPlay} from "@/components/ui/icons";
 import { useState } from "react";
 
 interface ProjectsProps {
@@ -40,6 +40,14 @@ function ProjectCard({ project, index }: { project: Project, index: number }) {
           </div>
 
           <div className="flex items-center justify-start gap-4">
+
+            <span className="px-3 py-1 rounded-xs btn flex justify-center items-center">
+              {project.githubUrl && (
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`Voir le code de ${project.name} sur GitHub`} className="transition-colors">
+                  <IconlyPlay size={20} color="currentColor" />
+                </a>
+              )}
+            </span>
 
             <span className="px-3 py-1 rounded-xs btn flex justify-center items-center">
               {project.githubUrl && (

@@ -57,7 +57,7 @@ export function Hero({ profile, stats }: HeroProps) {
                     </div>
 
                     <div className="flex flex-wrap w-full justify-start items-center gap-6">
-                        <a href="#contact" className="text-sm font-medium uppercase gap-2 btn py-3 text-center font-ui w-auto px-4 rounded-xs">
+                        <a href="#projets" className="text-sm font-medium uppercase gap-2 btn py-3 text-center font-ui w-auto px-4 rounded-xs">
                             {profile.ctaLabel}
                         </a>
                     </div>
